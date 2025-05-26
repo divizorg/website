@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-ElectreIVCredibility-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="electreivcredibility">
+<span id="electreivcredibility-put"></span><h1>ElectreIVCredibility</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">0.2.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>ElectreIVCredibility - computes credibility matrix as presented in Electre IV method.</p>
+<p>The key feature of this module is its flexibility in terms of the types of elements allowed to compare, i.e. alternatives vs alternatives, alternatives vs boundary profiles and alternatives vs central (characteristic) profiles.</p>
+<p>Electre IV is a method based on the construction of a set of embedded outranking relations (similarly to Electre III). There are five such relations, and every subsequent one accepts an outranking in a less credible circumstances.</p>
+<p>Please note that Electre IV is not the same method as Electre Iv.</p>
+<ul class="simple">
+<li><strong>Web page:</strong> <a class="reference external" href="http://github.com/xor-xor/electre_diviz" rel="nofollow">http://github.com/xor-xor/electre_diviz</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">performance_table</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">profiles_performance_table</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">classes_profiles</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">method_parameters</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="electreivcredibility-put-input3"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Criteria to consider, possibly with preference, indifference and veto thresholds. Each criterion must have a preference direction specified (min or max).</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="electreivcredibility-put-input1"></span><h3>alternatives</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Alternatives to consider.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performance-table">
+<span id="electreivcredibility-put-input4"></span><h3>performance_table</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The performance of alternatives.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="profiles-performance-table">
+<span id="electreivcredibility-put-input5"></span><h3>profiles_performance_table</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The performance of profiles (boundary or central).</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="classes-profiles">
+<span id="electreivcredibility-put-input2"></span><h3>classes_profiles</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Definitions of profiles (boundary or central) which should be used for classes (categories) representation.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesProfiles</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="method-parameters">
+<span id="electreivcredibility-put-input6"></span><h3>method_parameters</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>This parameter specifies the type of elements provided for comparison.</p>
+<p>Choosing &lsquo;boundary_profiles&rsquo; or &lsquo;central_profiles&rsquo; requires providing inputs &lsquo;classes_profiles&rsquo; and &lsquo;profiles_performance_table&rsquo; as well (which are optional by default).</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul class="simple">
+<li>Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</li>
+<li><strong>Name:</strong> comparison_with<ul>
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>alternatives vs alternatives (XMCDA label : alternatives) (default)</li>
+<li>alternatives vs boundary profiles (XMCDA label : boundary_profiles)</li>
+<li>alternatives vs central (characteristic) profiles (XMCDA label : central_profiles)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">"comparison_with"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="electreivcredibility-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">credibility</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-ElectreIVCredibility-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="credibility">
+<span id="electreivcredibility-put-output1"></span><h3>credibility</h3>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Credibility matrix computed from the given data.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesComparisons</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="electreivcredibility-put-output2"></span><h3>messages</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Messages or errors generated by this module.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-ElectreIVCredibility-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

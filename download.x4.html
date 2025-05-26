@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/download.x4.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="download-diviz-x4-v1">
+<span id="download-x4"></span><span id="index-0"></span><h1>Download diviz-x4 v1</h1>
+<p>The latest version of diviz is v1, pick up yours:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%">
+<col width="81%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operating System</th>
+<th class="head">Installer</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Windows 64 bits</td>
+<td><a class="reference external" href="https://downloads.diviz.org/diviz-x4/stable/diviz-x4_windows-x64_v1.exe" rel="nofollow">diviz-x4_windows-x64_v1.exe</a></td>
+</tr>
+<tr class="row-odd"><td>Windows 32 bits</td>
+<td><a class="reference external" href="https://downloads.diviz.org/diviz-x4/stable/diviz-x4_windows-x32_v1.exe" rel="nofollow">diviz-x4_windows-x32_v1.exe</a></td>
+</tr>
+<tr class="row-even"><td>Linux</td>
+<td><a class="reference external" href="https://downloads.diviz.org/diviz-x4/stable/diviz-x4_unix_v1.sh" rel="nofollow">diviz-x4_unix_v1.sh</a> (install with: <code class="docutils literal notranslate"><span class="pre">sh</span> <span class="pre">diviz_unix_v1.sh</span></code>)</td>
+</tr>
+<tr class="row-odd"><td>macOS</td>
+<td><div class="first last line-block">
+<div class="line"><strong>Warning:</strong> macOS Users:: see the note, below</div>
+<div class="line"><a class="reference external" href="https://downloads.diviz.org/diviz-x4/stable/diviz-x4_macos_v1.dmg" rel="nofollow">diviz-x4_macos_v1.dmg</a></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td>Others / Platform Independent</td>
+<td><a class="reference external" href="https://downloads.diviz.org/diviz-x4/stable/diviz-x4.v1.jar" rel="nofollow">diviz-x4.v1.jar</a> (this is not an installer)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">macOS users:: some users report that the installer fails, or diviz cannot execute workflow, when using the &ldquo;dmg&rdquo; installer.  If this happens to you, please use the Platform Independent <em>jar</em> file (above).  We do not have any Mac at hand, hence we are not able to replicate, diagnose and solve this problem.</p>
+</div>
+<p>Each of the installers (except the last entry, see below the note <a class="reference internal" href="/download.x4.html"><span class="std std-ref">Using diviz-client_v1.jar</span></a>) installs a version of diviz with an auto-update functionality: diviz checks if a new version is available each time it is launched (except for the last entry, see below).  When a new version is released, diviz offers to download and install the new version for you &ndash;alternatively, you can come back to this page and download the new installer.</p>
+<p>If you wish to be informed of future releases, we suggest that you subscribe to the (low traffic) announcement mailing list of diviz (for further details, please have a look at the <a class="reference internal" href="/contact.html"><span class="doc">contact page</span></a>).</p>
+<p>Should you have <em>any</em> problem with these installers, please <a class="reference external" href="/contact.html">report the problem</a>, so that we can help you installing the software and at the same time fix the problem.  Thank you!</p>
+<div class="section" id="regarding-java-being-required">
+<h2>Regarding Java being required</h2>
+<p>diviz requires Java 8 (update 111 or later), but depending on the situation, you do not necessarily install it yourself.</p>
+<ul class="simple">
+<li>Windows and macOS installers: these installers will automatically download and install Java for diviz when no suitable Java can be found on your computer.  In other words, the installers take care of everything and you do not have to worry about whether Java is installed.  Note that when diviz installs its own Java, it will <em>not</em> affect neither your system nor other programs, it will be used by diviz and diviz only.</li>
+<li>The Linux/Unix installer is not shipped with Java 8: please refer to the documentation to determine how Java 8 can be installed.  This is because there is too much differences between the different Linux distributions.</li>
+<li>The jar client: if you use the &ldquo;jar&rdquo; client, you must install Java 8 yourself. It can downloaded from the latest Java version <a href="https://www.java.com/" target="_blank" rel="nofollow">here</a>.</li>
+</ul>
+<p>Last, Windows users can download a version of diviz with the JRE already bundled in the installer:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%">
+<col width="79%">
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operating System</th>
+<th class="head">Installer</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Windows 64 bits (with Java)</td>
+<td><a class="reference external" href="https://downloads.diviz.org/diviz-x4/stable/diviz-x4_windows-x64_v1_jre8.exe" rel="nofollow">diviz-x4_windows-x64_v1_jre8.exe</a></td>
+</tr>
+<tr class="row-odd"><td>Windows 32 bits (with Java)</td>
+<td><a class="reference external" href="https://downloads.diviz.org/diviz-x4/stable/diviz-x4_windows-x32_v1_jre8.exe" rel="nofollow">diviz-x4_windows-x32_v1_jre8.exe</a></td>
+</tr>
+</tbody>
+</table>
+<p>The only difference with the installers featured at the top of this page is that they do not require an extra download of Java when the installer detects that Java is not installed, or that the installed version is not suitable for diviz.  In some restricted environments, it makes the installation easier.</p>
+</div>
+<div class="section" id="using-diviz-client-v1-jar">
+<span id="jar-client-x4"></span><h2>Using <code class="docutils literal notranslate"><span class="pre">diviz-client_v1.jar</span></code></h2>
+<p>When you download the raw .jar file, there is no mechanism for updating it, you will have to come back to this page when the software informs you that a new client is ready to be downloaded.</p>
+<p>To run the jar file:</p>
+<ul>
+<li><p class="first">either double click on the downloaded jar file;</p>
+</li>
+<li><p class="first">or run the following command (in a terminal window (Linux) or a command prompt (Windows)):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span> <span class="o">-</span><span class="n">jar</span> <span class="n">diviz</span><span class="o">-</span><span class="n">x4</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">jar</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>(Windows users open the command prompt by clicking on Start &gt; All Programs &gt; Accessories &gt; Command Prompt)</p>
+<div class="section" id="command-line-execution">
+<h3>Command-line execution</h3>
+<p>A command-line is also available, for launching the execution of workflows without having to use the graphical user interface:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DVZ_CMD</span><span class="o">=</span><span class="s2">"java -Djava.util.logging.config.file= -Done-jar.main.class=eu.telecom_bretagne.praxis.client.SimpleCommandLine -jar diviz-x4.v1.jar"</span>
+</pre></div>
+</div>
+<p>Executing a workflow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$DVZ_CMD /path/to/diviz/workspace/weightedSum/current/weightedSum.dvz
+</pre></div>
+</div>
+<p>For details on the available options: <code class="docutils literal notranslate"><span class="pre">$DVZ_CMD</span> <span class="pre">-h</span></code></p>
+<p>Note:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The command-line can substitute the workflow&rsquo;s input files with others before execution</li>
+<li>Option &lsquo;-v&rsquo; triggers verbose logging.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="note-on-the-installers">
+<h2>Note on the installers</h2>
+<div class="line-block">
+<div class="line">All installers (except the last &ldquo;jar&rdquo; entry) are made by the <a class="reference external" href="https://www.ej-technologies.com/products/install4j/overview.html" rel="nofollow">multi-platform installer builder &ldquo;install4j&rdquo;</a> (for which we benefit from an open-source project license).</div>
+<div class="line">The development of diviz is also helped by the use of the <a class="reference external" href="https://www.ej-technologies.com/products/jprofiler/overview.html" rel="nofollow">Java profiler &ldquo;JProfiler&rdquo;</a>  (for which we also have an open-source project license).</div>
+<div class="line">The Decision Deck Consortium thanks <a class="reference external" href="https://www.ej-technologies.com/" rel="nofollow">ej technology</a> for offering these licences to open-source projects.</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/download.x4.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

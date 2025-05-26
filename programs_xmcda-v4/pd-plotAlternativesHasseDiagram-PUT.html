@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="plotalternativeshassediagram">
+<span id="plotalternativeshassediagram-put"></span><h1>plotAlternativesHasseDiagram</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">0.2</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Draws Hasse diagram - visualization of transitive reduction of a finite partially ordered set. Service developed by Krzysztof Ciomek (Poznan University of Technology, under supervision of Milosz Kadzinski).</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Contact:</strong></dt>
+<dd>Krzysztof Ciomek (<a class="reference external" href="mailto://k.ciomek%40gmail.com" rel="nofollow">k<span>.</span>ciomek<span>@</span>gmail<span>.</span>com</a>),
+Milosz Kadzinski (<a class="reference external" href="mailto://milosz.kadzinski%40cs.put.poznan.pl" rel="nofollow">milosz<span>.</span>kadzinski<span>@</span>cs<span>.</span>put<span>.</span>poznan<span>.</span>pl</a>)</dd>
+</dl>
+</li>
+<li><strong>Web page:</strong> None</li>
+<li><strong>Reference:</strong> None</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html"><span class="std std-ref">preferenceRelation</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html"><span class="std std-ref">parameters</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="plotalternativeshassediagram-put-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of alternatives.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;alternatives&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;alternative id=&rdquo;&hellip;&rdquo;&gt;</dt>
+<dd>&lt;active&gt;&hellip;&lt;/active&gt;</dd>
+</dl>
+<p class="last">&lt;/alternative&gt;</p>
+</dd>
+</dl>
+<p>&lt;/alternatives&gt;</p>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="preferencerelation">
+<span id="plotalternativeshassediagram-put-preferencerelation"></span><h3>preferenceRelation</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Necessary assignment based preference relation between alternatives.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;alternativesMatrix&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;row&gt;</dt>
+<dd><p class="first">&lt;alternativeID&gt;a1&lt;/alternativeID&gt;
+&lt;column&gt;</p>
+<blockquote>
+<div>&lt;alternativeID&gt;a2&lt;/alternativeID&gt;
+&lt;values&gt;&lt;value&gt;&lt;real&gt;0.0&lt;/real&gt;&lt;/value&gt;&lt;/values&gt;</div></blockquote>
+<p>&lt;/column&gt;
+&lt;column&gt;</p>
+<blockquote>
+<div>&lt;alternativeID&gt;a7&lt;/alternativeID&gt;
+&lt;values&gt;&lt;value&gt;&lt;real&gt;0.0&lt;/real&gt;&lt;/value&gt;&lt;/values&gt;</div></blockquote>
+<p class="last">&lt;/column&gt;
+[&hellip;]</p>
+</dd>
+</dl>
+<p class="last">&lt;/row&gt;
+[&hellip;]</p>
+</dd>
+</dl>
+<p>&lt;/alternativesMatrix&gt;</p>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="plotalternativeshassediagram-put-parameters"></span><h3>parameters</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Diagram drawing parameters.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> cluster</p>
+<p><em>Whether to cluster elements which have same parents and children and are connected all to all.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> true</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> transitiveReduction</p>
+<p><em>Whether to perform transitive reduction.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> true</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> shape</p>
+<p><em>Shape of diagram nodes.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Rounded rectangle. (XMCDA label : roundrect) (default)</li>
+<li>Rectangle. (XMCDA label : rect)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> arrows</p>
+<p><em>Direction of arrows.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Forward. (XMCDA label : forward) (default)</li>
+<li>Backward. (XMCDA label : backward)</li>
+<li>Both directions. (XMCDA label : both)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodParameters</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;programParameters&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;parameter name=&rdquo;cluster&rdquo;&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;boolean&gt;%1&lt;/boolean&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/values&gt;</p>
+</dd>
+</dl>
+<p>&lt;/parameter&gt;
+&lt;parameter name=&rdquo;transitiveReduction&rdquo;&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;boolean&gt;%2&lt;/boolean&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p>&lt;/values&gt;</p>
+</div></blockquote>
+<p>&lt;/parameter&gt;
+&lt;parameter name=&rdquo;shape&rdquo;&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;label&gt;%3&lt;/label&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p>&lt;/values&gt;</p>
+</div></blockquote>
+<p>&lt;/parameter&gt;
+&lt;parameter name=&rdquo;arrows&rdquo;&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;label&gt;%4&lt;/label&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p>&lt;/values&gt;</p>
+</div></blockquote>
+<p class="last">&lt;/parameter&gt;</p>
+</dd>
+</dl>
+<p>&lt;/programParameters&gt;</p>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="plotalternativeshassediagram-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html"><span class="std std-ref">hasseDiagram.png</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="hassediagram">
+<span id="plotalternativeshassediagram-put-hassediagram"></span><h3>hasseDiagram</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Hasse diagram.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> other</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="plotalternativeshassediagram-put-messages"></span><h3>messages</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Messages generated by the program.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-plotAlternativesHasseDiagram-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

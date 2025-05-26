@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="acuta">
+<span id="acuta-utar"></span><h1>ACUTA</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">UTAR</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">2.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Computes ACUTA method - analytic center for UTA - which provides a set of additive value functions that have a central position in the polyhedron of admissible value functions, given some preference information (preference relation).</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Boris Leistedt (<a class="reference external" href="mailto://boris.leistedt%40gmail.com" rel="nofollow">boris<span>.</span>leistedt<span>@</span>gmail<span>.</span>com</a>)</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">performanceTable</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">preferencesDirections</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">segments</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">alternativesRanking</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">alternativesPreferences</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">alternativesIndifferences</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">delta</span></a> <em>(optional)</em></li>
+</ul>
+<div class="section" id="criteria">
+<span id="acuta-utar-crit"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of criteria. Criteria can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), criteria are considered as active.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteria</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteria</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterion</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criterion</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">criteria</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="acuta-utar-alt"></span><h3>alternatives</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>A list of alternatives. Alternatives can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), alternatives are considered as active.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternatives</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternatives</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternative</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">alternative</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternatives</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performancetable">
+<span id="acuta-utar-perftable"></span><h3>performanceTable</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Values of criteria for different alternatives. It must contains IDs of both criteria and alternatives previously described.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> performanceTable</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">performance</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">performance</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="preferencedirections">
+<span id="acuta-utar-prefdir"></span><h3>preferenceDirections</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Optimization direction for the selected criteria (min or max).</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteriaValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteriasegments">
+<span id="acuta-utar-critseg"></span><h3>criteriaSegments</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Number of segments in each value function to be constructed by UTA.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteriaValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesrank">
+<span id="acuta-utar-altrank"></span><h3>alternativesRank</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Ranking (preorder) of alternatives, corresponding to pariwize preference and indifference statements.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativespreferences">
+<span id="acuta-utar-altcomp1"></span><h3>alternativesPreferences</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Asymmetric part of the preference relation, representing strict preference statements, under the form of paiwise comparisons of alternatives.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">pair</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">initial</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">initial</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">terminal</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">terminal</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">pair</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesindifferences">
+<span id="acuta-utar-altcomp2"></span><h3>alternativesIndifferences</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Symmetric part of the preference relation, representing indifference statements, under the form of paiwise comparisons of alternatives.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">pair</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">initial</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">initial</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">terminal</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">terminal</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">pair</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="delta">
+<span id="acuta-utar-delta"></span><h3>delta</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Optional delta value for UTA - delta is the utility gap between two successive alternatives in the preference ranking.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> delta</p>
+<p><em>Delta value for UTA</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> Delta should be positive and small</li>
+<li><strong>Type:</strong> float</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="acuta-utar-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">valueFunctions</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html"><span class="std std-ref">message</span></a></li>
+</ul>
+<div class="section" id="valuefunctions">
+<span id="acuta-utar-valuefunctions"></span><h3>valueFunctions</h3>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>Constructed value functions for the selected criteria and the provided rankings, using ACUTA method.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteria</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteria</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"criteria"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterion</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criterionFunction</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">points</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">point</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">abscissa</span><span class="o">&gt;&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;&lt;/</span><span class="n">abscissa</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">ordinate</span><span class="o">&gt;&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;&lt;/</span><span class="n">ordinate</span><span class="o">&gt;</span>
+                                <span class="o">&lt;/</span><span class="n">point</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">points</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">criterionFunction</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criterion</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">criteria</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="acuta-utar-logmessage"></span><h3>messages</h3>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>Log message.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodMessages</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">methodMessages</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"methodMessage"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">logMessage</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">text</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">text</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">logMessage</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">errorMessage</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">text</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">text</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">errorMessage</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">methodMessages</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-ACUTA-UTAR.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

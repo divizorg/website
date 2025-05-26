@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-randomCriteria-PyXMCDA.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="randomcriteria">
+<span id="randomcriteria-pyxmcda"></span><h1>randomCriteria</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PyXMCDA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.1</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>This web service allows to create a simple list of criteria by providing the desired number of criteria. Now, it is not taking into account creation of thresholds.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Thomas Veneziano (<a class="reference external" href="mailto://thomas.veneziano%40uni.lu" rel="nofollow">thomas<span>.</span>veneziano<span>@</span>uni<span>.</span>lu</a>)</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">nbCriteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">criteriaPrefix</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">criteriaNames</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">criteriaType</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">seed</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">lowerBounds</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">upperBounds</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">numberOfLevels</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">preferenceDirection</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">thresholdsNames</span></a> <em>(optional)</em></li>
+</ul>
+<div class="section" id="nbcriteria">
+<span id="randomcriteria-pyxmcda-nbcriteria"></span><h3>nbCriteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Indicates the desired number of criteria. It must be a strict positive integer.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> nbCriteria</p>
+<p><em>Indicates the desired number of criteria.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> The value should be a strict positive integer.</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 2</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameter
+         name="nbCriteria"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;value&gt;
+            &lt;integer&gt;%1&lt;/integer&gt;
+        &lt;/value&gt;
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteriaprefix">
+<span id="randomcriteria-pyxmcda-criteriaprefix"></span><h3>criteriaPrefix</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Indicates the desired prefix for the name of the criteria. If not provided, criteria will be called g1, g2, &hellip; If provided, criteria will be called prefix1, prefix2, &hellip; Note that it will only be used if you provide a number of alternatives.</p>
+</div>
+<div class="section" id="id3">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> criteriaPrefix</p>
+<p><em>Indicates the desired prefix for the criteria.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;g&rdquo;</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameter
+         name="criteriaPrefix"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;value&gt;
+            &lt;label&gt;%1&lt;/label&gt;
+        &lt;/value&gt;
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criterianames">
+<span id="randomcriteria-pyxmcda-criterianames"></span><h3>criteriaNames</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id5">
+<h4>Description:</h4>
+<p>Indicates a list of criteria names. Note that if criteriaNames and nbCriteria are provided at the same time, then only criteriaNames are considered.</p>
+</div>
+<div class="section" id="id6">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="criteriaNames"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter&gt;&lt;value&gt;
+            &lt;label&gt;[...]&lt;/label&gt;
+        &lt;/value&gt;&lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteriatype">
+<span id="randomcriteria-pyxmcda-criteriatype"></span><h3>criteriaType</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id7">
+<h4>Description:</h4>
+<p>Allows to indicate the type of some criteria (qualitative or quantitative). The default value for each criterion is quantitative.</p>
+</div>
+<div class="section" id="id8">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="criteriaType"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter name="&lt;!-- The name of the criterion --&gt;&gt;
+             &lt;value&gt;&lt;label&gt;&lt;!-- qualitative or quantitative --&gt;&lt;/label&gt;&lt;/value&gt;
+        &lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="seed">
+<span id="randomcriteria-pyxmcda-seed"></span><h3>seed</h3>
+<div class="section" id="id9">
+<h4>Description:</h4>
+<p>Allows to initialize the random generator with a precise seed.</p>
+</div>
+<div class="section" id="id10">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via the XMCDA file.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> seed</p>
+<p><em>Allows to initialize the random generator with a precise seed</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> The value should be a positive integer.</li>
+<li><strong>Type:</strong> integer</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+       &lt;parameter
+              name="seed"&gt; &lt;!-- REQUIRED  --&gt;
+              &lt;value&gt;
+                     &lt;integer&gt;%1&lt;/integer&gt;
+              &lt;/value&gt;
+       &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="lowerbounds">
+<span id="randomcriteria-pyxmcda-lowerbounds"></span><h3>lowerBounds</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Allows to indicate a lower bound for some quantitative criteria. The default value is 0. Lower bounds for qualitative criteria are ignored.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="lowerBound"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter name="&lt;!-- The name of a quantitative criterion --&gt;&gt;
+             &lt;value&gt;[...]&lt;/value&gt;
+        &lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="upperbounds">
+<span id="randomcriteria-pyxmcda-upperbounds"></span><h3>upperBounds</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Allows to indicate an upper bound for some quantitative criteria. The default value is 100. Upper bounds for qualitative criteria are ignored.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="upperBound"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter name="&lt;!-- The name of a quantitative criterion --&gt;&gt;
+             &lt;value&gt;[...]&lt;/value&gt;
+        &lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="numberoflevels">
+<span id="randomcriteria-pyxmcda-numberoflevels"></span><h3>numberOfLevels</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Allows to indicate a number of levels for some qualitative criteria. The default value is 10. if provided for quantitative criteria, it will be ignored.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="numberOfLevels"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter name="&lt;!-- The name of a qualitative criterion --&gt;&gt;
+             &lt;value&gt;&lt;integer&gt;[...]&lt;/integer&gt;&lt;/value&gt;
+        &lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="preferencedirection">
+<span id="randomcriteria-pyxmcda-preferencedirection"></span><h3>preferenceDirection</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>Allows to indicate a preference direction (min or max) for some criteria. The default value is max.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="preferenceDirection"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter name="&lt;!-- The name of a criterion --&gt;&gt;
+             &lt;value&gt;&lt;label&gt;&lt;!-- min or max --&gt;&lt;/label&gt;&lt;/value&gt;
+        &lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="thresholdsnames">
+<span id="randomcriteria-pyxmcda-thresholdsnames"></span><h3>thresholdsNames</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>Indicates a list of thresholds names. The names must be provided in an increasing order of importance, as the randomly generated values will be sorted and associated to the thresholds in the given order. The thresholds are added for every criteria (with different random values for each one).</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="thresholdsNames"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter&gt;
+             &lt;value&gt;&lt;label&gt;&lt;!-- the name of a threshold --&gt;&lt;/label&gt;&lt;/value&gt;
+        &lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="randomcriteria-pyxmcda-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-randomCriteria-PyXMCDA.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="randomcriteria-pyxmcda-criteria"></span><h3>criteria</h3>
+<div class="section" id="id22">
+<h4>Description:</h4>
+<p>A list of criteria with active tags.</p>
+</div>
+<div class="section" id="id23">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="randomcriteria-pyxmcda-messages"></span><h3>messages</h3>
+<div class="section" id="id24">
+<h4>Description:</h4>
+<p>A list of messages generated by the algorithm.</p>
+</div>
+<div class="section" id="id25">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-randomCriteria-PyXMCDA.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

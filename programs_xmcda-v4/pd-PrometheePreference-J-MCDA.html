@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="prometheepreference">
+<span id="prometheepreference-j-mcda"></span><h1>PrometheePreference</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">J-MCDA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">0.5.5</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Computes a preference relation, a la Promethee.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Olivier Cailloux &lt;<a class="reference external" href="mailto://olivier.cailloux%40ecp.fr" rel="nofollow">olivier<span>.</span>cailloux<span>@</span>ecp<span>.</span>fr</a>&gt;</li>
+<li><strong>Web page:</strong> <a class="reference external" href="http://sourceforge.net/projects/j-mcda" rel="nofollow">http://sourceforge.net/projects/j-mcda/</a></li>
+<li><strong>Reference:</strong> Cailloux, Olivier. Electre and Promethee MCDA methods as reusable software components. In Proceedings of the 25th Mini-EURO Conference on Uncertainty and Robustness in Planning and Decision Making (URPDM 2010). Coimbra, Portugal, 2010.</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">alternatives</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">criteriaScales</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">criteriaThresholds</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">performances</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">weights</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="prometheepreference-j-mcda-input1"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>The criteria to consider, possibly with preference and veto thresholds (provided separated via the input &lsquo;criteriaThresholds&rsquo;). Each one must have a preference direction (see input &lsquo;criteriaScales&rsquo;). Set some criteria as inactive (or remove them) to ignore them.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="prometheepreference-j-mcda-input0"></span><h3>alternatives</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The alternatives to consider. Set some alternatives as inactive (or remove them) to ignore them.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteria-scales">
+<span id="prometheepreference-j-mcda-criteriascales"></span><h3>criteria scales</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The scale of the criteria to consider.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaScales</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteria-thresholds">
+<span id="prometheepreference-j-mcda-criteriathresholds"></span><h3>criteria thresholds</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The criteria&rsquo; preference and indifference thresholds.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performances">
+<span id="prometheepreference-j-mcda-input3"></span><h3>performances</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>The performances of the alternatives on the criteria to consider.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="weights">
+<span id="prometheepreference-j-mcda-input2"></span><h3>weights</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>The weights of the criteria to consider.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="prometheepreference-j-mcda-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">preference</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="preference">
+<span id="prometheepreference-j-mcda-output0"></span><h3>preference</h3>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>The preference relation computed from the given input data.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="prometheepreference-j-mcda-output1"></span><h3>messages</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>A status message.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-PrometheePreference-J-MCDA.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

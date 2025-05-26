@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-alternativesRankingViaQualificationDistillation-ITTB.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="alternativesrankingviaqualificationdistillation">
+<span id="alternativesrankingviaqualificationdistillation-ittb"></span><h1>alternativesRankingViaQualificationDistillation</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">ITTB</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.1</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>This web service computes rankings on the alternatives by distillation of alternatives&rsquo; qualification. Compared to the web service alternativesRankingViaQualificationDistillation, this web service requires a non-valued or a 0-1 valued outranking relation as input. The partial ranking (intersectionDistillation) is obtained by taking the intersection of upwards and downwards distillation preorders (which are also provided).</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Dhouha Kbaier (<a class="reference external" href="mailto://dhouha.kbaier%40telecom-bretagne.eu" rel="nofollow">dhouha<span>.</span>kbaier<span>@</span>telecom-bretagne<span>.</span>eu</a>)</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">outrankingRelation</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="alternativesrankingviaqualificationdistillation-ittb-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of alternatives. Alternatives can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), alternatives are considered as active.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternatives</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternatives</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">alternative</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">active</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">active</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">alternative</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternatives</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="outrankingrelation">
+<span id="alternativesrankingviaqualificationdistillation-ittb-outrankingrelation"></span><h3>outrankingRelation</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>A non-valued relation or a 0-1 valued outranking relation. A numeric &lt;value&gt; indicates a the valuation for each &lt;pair&gt; of the relation.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesComparisons</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pair</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">initial</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">initial</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">terminal</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">terminal</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">pair</span><span class="o">&gt;</span>
+
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="alternativesrankingviaqualificationdistillation-ittb-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">intersectionDistillation</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">downwardsDistillation</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">upwardsDistillation</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="intersectiondistillation">
+<span id="alternativesrankingviaqualificationdistillation-ittb-intersectiondistillation"></span><h3>intersectionDistillation</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>An &lt;alternativesComparisons&gt; containing the partial preorder obtained by taking the intersection of the downwards and upwards distillation preorders.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesComparisons</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesComparisons</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"Intersection distillation"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pair</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">initial</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">initial</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">terminal</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">terminal</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">pair</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="downwardsdistillation">
+<span id="alternativesrankingviaqualificationdistillation-ittb-downwardsdistillation"></span><h3>downwardsDistillation</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Alternatives&rsquo; ranks in the downwards distillation preorder.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                    <span class="o">&lt;</span><span class="n">alternativesValues</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"Downwards distillation"</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="upwardsdistillation">
+<span id="alternativesrankingviaqualificationdistillation-ittb-upwardsdistillation"></span><h3>upwardsDistillation</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Alternatives&rsquo; ranks in the upwards distillation preorder.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                    <span class="o">&lt;</span><span class="n">alternativesValues</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"Upwards distillation"</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="alternativesrankingviaqualificationdistillation-ittb-messages"></span><h3>messages</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>A list of messages generated by the algorithm.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-alternativesRankingViaQualificationDistillation-ITTB.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

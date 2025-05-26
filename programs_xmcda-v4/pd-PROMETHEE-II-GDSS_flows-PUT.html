@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="promethee-ii-gdss-flows">
+<span id="promethee-ii-gdss-flows-put"></span><h1>PROMETHEE-II-GDSS_flows</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Module for calculation PROMETHEE group ranking as a weighted sum of flows from every decision maker for each alternative.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Magdalena Dziecielska &lt;<a class="reference external" href="mailto://magdalenadziecielska6%40gmail.com" rel="nofollow">magdalenadziecielska6<span>@</span>gmail<span>.</span>com</a>&gt;</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://github.com/MagdalenaDziecielska/PrometheeDiviz" rel="nofollow">https://github.com/MagdalenaDziecielska/PrometheeDiviz</a></li>
+<li><strong>Reference:</strong> C. Macharis, J.-P. Brans and B. Mareschal, 1998. The GDSS PROMETHEE Procedure. Journal of Decision Systems, Vol. 7-SI/1998, 283-307.</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_1</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_2</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_3</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_4</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_5</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_6</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_7</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_8</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_9</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">flows_10</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">nbDM</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">method_parameters</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="promethee-ii-gdss-flows-put-input1"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Alternatives to consider.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-1">
+<span id="promethee-ii-gdss-flows-put-flows-1"></span><h3>flows 1</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Flows for decision maker 1.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-2">
+<span id="promethee-ii-gdss-flows-put-flows-2"></span><h3>flows 2</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Flows for decision maker 2.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-3">
+<span id="promethee-ii-gdss-flows-put-flows-3"></span><h3>flows 3</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Flows for decision maker 3.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-4">
+<span id="promethee-ii-gdss-flows-put-flows-4"></span><h3>flows 4</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Flows for decision maker 4.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-5">
+<span id="promethee-ii-gdss-flows-put-flows-5"></span><h3>flows 5</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Flows for decision maker 5.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-6">
+<span id="promethee-ii-gdss-flows-put-flows-6"></span><h3>flows 6</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Flows for decision maker 6.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-7">
+<span id="promethee-ii-gdss-flows-put-flows-7"></span><h3>flows 7</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Flows for decision maker 7.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-8">
+<span id="promethee-ii-gdss-flows-put-flows-8"></span><h3>flows 8</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Flows for decision maker 8.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-9">
+<span id="promethee-ii-gdss-flows-put-flows-9"></span><h3>flows 9</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>Flows for decision maker 9.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="flows-10">
+<span id="promethee-ii-gdss-flows-put-flows-10"></span><h3>flows 10</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>Flows for decision maker 10.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="number-of-decision-makers">
+<span id="promethee-ii-gdss-flows-put-nbdm"></span><h3>Number of decision makers</h3>
+<div class="section" id="id22">
+<h4>Description:</h4>
+<p>Number of decision makers (2-10)</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul class="simple">
+<li><strong>Name:</strong> Number of decision makers<ul>
+<li><strong>Constraint description:</strong> An integer value between 2 and 10 (inclusive).</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 2</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> parameter</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="method-parameters">
+<span id="promethee-ii-gdss-flows-put-method-parameters"></span><h3>method parameters</h3>
+<div class="section" id="id24">
+<h4>Description:</h4>
+<p>A set of parameters provided to tune up the module&rsquo;s operation.</p>
+</div>
+<div class="section" id="id25">
+<h4>GUI information:</h4>
+<ul class="simple">
+<li>Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</li>
+<li><strong>Name:</strong> decision maker 1 weight<ul>
+<li><strong>Constraint description:</strong> An integer value.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 2 weight:<ul>
+<li><strong>Constraint description:</strong> An integer value.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 3 weight:<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 4 weight<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 5 weight<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 6 weight<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 7 weight<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 8 weight<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 9 weight<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+<li><strong>Name:</strong> decision maker 10 weight<ul>
+<li><strong>Constraint description:</strong> An integer value. Choose 0.0 when decision maker does not exist.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.0</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> programParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker1"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker2"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker3"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker4"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker5"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker6"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker7"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">7</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker8"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker9"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">9</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"decisionMaker10"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">10</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">programParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="promethee-ii-gdss-flows-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">aggregated_flows</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">ranking</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="aggregated-flows">
+<span id="promethee-ii-gdss-flows-put-output1"></span><h3>aggregated flows</h3>
+<div class="section" id="id27">
+<h4>Description:</h4>
+<p>Aggregated flows and weights for decision makers.</p>
+</div>
+<div class="section" id="id28">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="ranking">
+<span id="promethee-ii-gdss-flows-put-output2"></span><h3>ranking</h3>
+<div class="section" id="id29">
+<h4>Description:</h4>
+<p>Final group ranking</p>
+</div>
+<div class="section" id="id30">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="promethee-ii-gdss-flows-put-output3"></span><h3>messages</h3>
+<div class="section" id="id31">
+<h4>Description:</h4>
+<p>Messages or errors generated by this module.</p>
+</div>
+<div class="section" id="id32">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-PROMETHEE-II-GDSS_flows-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

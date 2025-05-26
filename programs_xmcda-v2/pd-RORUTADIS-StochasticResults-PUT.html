@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-RORUTADIS-StochasticResults-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="rorutadis-stochasticresults">
+<span id="rorutadis-stochasticresults-put"></span><h1>RORUTADIS-StochasticResults</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">0.1</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Calculates stochastic results for alternative assignments, assignment-based preference relation and class cardinalities. The results are computed by sampling the space of compatible models.</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Contact:</strong></dt>
+<dd>Krzysztof Ciomek (<a class="reference external" href="mailto://k.ciomek%40gmail.com" rel="nofollow">k<span>.</span>ciomek<span>@</span>gmail<span>.</span>com</a>),
+Milosz Kadzinski (<a class="reference external" href="mailto://milosz.kadzinski%40cs.put.poznan.pl" rel="nofollow">milosz<span>.</span>kadzinski<span>@</span>cs<span>.</span>put<span>.</span>poznan<span>.</span>pl</a>)</dd>
+</dl>
+</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://github.com/kciomek/rorutadis" rel="nofollow">https://github.com/kciomek/rorutadis</a></li>
+<li><strong>Reference:</strong> None</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">categories</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">performanceTable</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">assignmentExamples</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">assignmentComparisons</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">categoriesCardinalities</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">methodParameters</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="rorutadis-stochasticresults-put-criteria"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of criteria (&lt;criteria&gt; tag) with information about preference direction (&lt;criteriaValues mcdaConcept=&rdquo;preferenceDirection&rdquo;&gt;, 0 - gain, 1 - cost) and number of characteristic points (&lt;criteriaValues mcdaConcept=&rdquo;numberOfCharacteristicPoints&rdquo;&gt;, 0 for the most general marginal utility function or integer grater or equal to 2) of each criterion.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteria</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteria</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterion</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"[...]"</span> <span class="o">/&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteria</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">criteriaValues</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"preferenceDirection"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">criteriaValues</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"numberOfCharacteristicPoints"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;</span><span class="p">[</span><span class="mi">0</span><span class="o">|</span><span class="n">integer</span> <span class="n">greater</span> <span class="ow">or</span> <span class="n">equal</span> <span class="n">to</span> <span class="mi">2</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="rorutadis-stochasticresults-put-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>A list of alternatives.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternatives</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                    <span class="o">&lt;</span><span class="n">alternatives</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">alternative</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"[...]"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">active</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">active</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">alternative</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternatives</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories">
+<span id="rorutadis-stochasticresults-put-categories"></span><h3>categories</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>A list of categories (classes). List must be sorted from the worst category to the best.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> categories</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                    <span class="o">&lt;</span><span class="n">categories</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">category</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"[...]"</span> <span class="o">/&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">categories</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performancetable">
+<span id="rorutadis-stochasticresults-put-performancetable"></span><h3>performanceTable</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The performances of the alternatives.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignmentexamples">
+<span id="rorutadis-stochasticresults-put-assignmentexamples"></span><h3>assignmentExamples</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>A list of assignment examples of alternatives to intervals of categories (classes) or to a specific category (class).</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesAffectations</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesAffectations</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">categoryID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">categoryID</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">categoriesInterval</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">lowerBound</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">categoryID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">categoryID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">lowerBound</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">upperBound</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">categoryID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">categoryID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">upperBound</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">categoriesInterval</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">categoriesSet</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">categoryID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">categoryID</span><span class="o">&gt;</span>
+                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                <span class="o">&lt;/</span><span class="n">categoriesSet</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternativesAffectations</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignmentcomparisons">
+<span id="rorutadis-stochasticresults-put-assignmentcomparisons"></span><h3>assignmentComparisons</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Two lists of assignment pairwise comparisons. A comparison from list with attribute mcdaConcept=&rdquo;atLeastAsGoodAs&rdquo; indicates that some alternative should be assigned to class at least as good as class of some other alternative (k = 0) or at least better by k classes (k &gt; 0). A comparison from list with attribute mcdaConcept=&rdquo;atMostAsGoodAs&rdquo; indicates that some alternative should be assigned to class at most better by k classes (k &gt; 0) then some other alternative. Note: usage of this kind of preference information significantly slows down computations.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesComparisons</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesComparisons</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"atLeastAsGoodAs"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">pair</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">initial</span><span class="o">&gt;&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;&lt;/</span><span class="n">initial</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">terminal</span><span class="o">&gt;&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;&lt;/</span><span class="n">terminal</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;</span><span class="n">k</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">pair</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">alternativesComparisons</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"atMostAsGoodAs"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categoriescardinalities">
+<span id="rorutadis-stochasticresults-put-categoriescardinalities"></span><h3>categoriesCardinalities</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>A list of category (class) cardinality constraints. It allows to define minimal and/or maximal desired category (class) cardinalities. Note: usage of this kind of preference information significantly slows down computations.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> categoriesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">categoriesValues</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">categoryValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">categoryID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">categoryID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">interval</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">lowerBound</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">lowerBound</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">upperBound</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">upperBound</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">interval</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">categoryValue</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">categoriesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="methodparameters">
+<span id="rorutadis-stochasticresults-put-methodparameters"></span><h3>methodParameters</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Method parameters.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> strictlyMonotonicValueFunctions</p>
+<p><em>Whether marginal value functions strictly monotonic or not.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> numberOfSamples</p>
+<p><em>Number of samples.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 100</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">"strictlyMonotonicValueFunctions"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">"numberOfSamples"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<dl class="docutils">
+<dt>&lt;!&ndash; The following is OPTIONAL - we comment it out because we do not want to</dt>
+<dd>change the WS nor the diviz program for now, we just want to be able to
+use it in automated tests.</dd>
+<dt>&ndash;&gt;&lt;!&ndash;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;parameter name=&rdquo;seed&rdquo;&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;integer&gt;%3&lt;/integer&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/parameter&gt;</p>
+</dd>
+<dt>&ndash;&gt;</dt>
+<dd>&lt;/methodParameters&gt;</dd>
+</dl>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="rorutadis-stochasticresults-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">stochasticAssignments</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">stochasticPreferenceRelation</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">stochasticClassCardinalities</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-RORUTADIS-StochasticResults-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="stochasticassignments">
+<span id="rorutadis-stochasticresults-put-stochasticassignments"></span><h3>stochasticAssignments</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Stochastic assignments. The value for alternative a_i and category c_j equals to the rate of samples, for which alternative a_i was assigned to category C_j.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesAffectations</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesAffectations</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">categoryID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">categoryID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">alternativeAffectation</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternativesAffectations</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="stochasticpreferencerelation">
+<span id="rorutadis-stochasticresults-put-stochasticpreferencerelation"></span><h3>stochasticPreferenceRelation</h3>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>Stochastic preference relation. Each value for pair (a_i, a_j) describes the rate of samples, for which alternative a_i was assigned to class at least as good as class of a_j.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesComparisons</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesComparisons</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"atLeastAsGoodAs"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">pair</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">initial</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">initial</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">terminal</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">terminal</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">pair</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="stochasticclasscardinalities">
+<span id="rorutadis-stochasticresults-put-stochasticclasscardinalities"></span><h3>stochasticClassCardinalities</h3>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>Stochastic class cardinalities. Each category has sequence of n + 1 values, where n is the number of considered alternatives. First value corresponds to the cardinality 0, and next n values to subsequent cardinalities from 1 to n. i-th value for c_j class describes the rate of samples, for which i-1 alternatives were assigned to class c_j.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> categoriesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">categoriesValues</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">categoryValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">categoryID</span><span class="o">&gt;</span><span class="n">c01</span><span class="o">&lt;/</span><span class="n">categoryID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">categoryValue</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">categoriesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="rorutadis-stochasticresults-put-messages"></span><h3>messages</h3>
+<div class="section" id="id22">
+<h4>Description:</h4>
+<p>Messages generated by the program.</p>
+</div>
+<div class="section" id="id23">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-RORUTADIS-StochasticResults-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

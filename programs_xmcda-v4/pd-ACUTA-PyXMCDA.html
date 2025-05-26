@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="acuta">
+<span id="acuta-pyxmcda"></span><h1>ACUTA</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PyXMCDA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Perform ACUTA computation on provided inputs.
+Decision Maker&rsquo;s Preferences can be provided using either a global ranking of reference alternatives, or the pair-wise alternatives preferences and indifferences.
+Outputs optimal valueFunctions along their valuesErrors.</p>
+<p>The service generate discrete functions for criteria with qualitative scales.
+Number of segments will be still be used to compute a continuous marginal utility function.
+It is therefore advised to use (n - 1) as the number of segments (with n the number of labels of the qualitative scale), while using incremented integer values in such scale definition (e.g. { 1, 2, 3,&hellip;, n}).
+Labels of the scale are used as the abscissa.</p>
+<p>This service raises an error if the solution found does not give the same ranking of reference alternatives than in inputs (even with application of the values errors, called sigma in (Munda, 2005).</p>
+<p>Also it outputs the UTA* optimum solution if analytic center computation fails.</p>
+<p>The implementation and indexing conventions are based on:</p>
+<blockquote>
+<div>Munda, G. (2005). UTA Methods.
+In Multiple criteria decision analysis: State of the art surveys
+(pp 297-343). Springer, New York, NY.</div></blockquote>
+<p>N.B: This service uses the python module Pulp for representing and solving UTA problems.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Nicolas Duminy (<a class="reference external" href="mailto://nicolas.duminy%40telecom-bretagne.eu" rel="nofollow">nicolas<span>.</span>duminy<span>@</span>telecom-bretagne<span>.</span>eu</a>)</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://gitlab.com/nduminy/ws-pyxmcda" rel="nofollow">https://gitlab.com/nduminy/ws-pyxmcda</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">alternatives</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">criteria</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">performanceTable</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">alternativesPreferences</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">alternativesIndifferences</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">alternativesRanks</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">criteriaScales</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">criteriaSegments</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">parameters</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="acuta-pyxmcda-alternatives"></span><h3>alternatives</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>The alternatives. Only used to exclude inactive alternatives from computations (all are considered if not provided).</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteria">
+<span id="acuta-pyxmcda-criteria"></span><h3>criteria</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The criteria. Only used to exclude inactive criteria from computations (all are considered if not provided).</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performance-table">
+<span id="acuta-pyxmcda-performancetable"></span><h3>performance table</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The performance table.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives-preferences">
+<span id="acuta-pyxmcda-alternativespreferences"></span><h3>alternatives preferences</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<dl class="docutils">
+<dt>The alternatives preferences used to infer utility functions.</dt>
+<dd>If alternatives is provided, all reference alternatives set as inactive are not considered.</dd>
+</dl>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives-indifferences">
+<span id="acuta-pyxmcda-alternativesindifferences"></span><h3>alternatives indifferences</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<dl class="docutils">
+<dt>The alternatives indifferences used to infer utility functions.</dt>
+<dd>If alternatives is provided, all reference alternatives set as inactive are not considered.</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives-ranks">
+<span id="acuta-pyxmcda-alternativesranks"></span><h3>alternatives ranks</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<dl class="docutils">
+<dt>Ranking of reference alternatives used to infer utility functions.</dt>
+<dd>If alternatives is provided, all reference alternatives set as inactive are not considered.</dd>
+</dl>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteria-scales">
+<span id="acuta-pyxmcda-criteriascales"></span><h3>criteria scales</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<dl class="docutils">
+<dt>The criteria scales. Mandatory if qualitative values are in performance table.</dt>
+<dd>If not provided, minimum/maximum values will be extracted from performance table,
+and preference direction will be set to max.
+Nominal and fuzzy qualitative scales are forbidden.</dd>
+</dl>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaScales</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteria-segments">
+<span id="acuta-pyxmcda-criteriasegments"></span><h3>criteria segments</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Number of segments per marginal utility function.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="acuta-pyxmcda-parameters"></span><h3>parameters</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Parameters of the method</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> Inputs alternatives</p>
+<p><em>How to provide alternatives hierarchy</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Use ranking of alternatives (XMCDA label : ranking) (default)</li>
+<li>Use pairwise preferences and indifferences (XMCDA label : relations)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Discrimination threshold</p>
+<p><em>Discrimination threshold value.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> Bigger than 0.0.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.001</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Monotonicity threshold</p>
+<p><em>Monotonicity threshold value.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> Bigger than or equal to 0.0.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.001</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Analytic center epsilon</p>
+<p><em>Absolute tolerance for analytic center computation (closeness to optimal solution).</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> Bigger than 0.0.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 1e-6</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Newton step coefficient</p>
+<p><em>Coefficient applied to compute newton steps in analytic center computation.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> Bigger than 0.0.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 0.9</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Significative figures</p>
+<p><em>Number of significative figures in outputs values.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> Bigger than 0.</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 3</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Absolute tolerance</p>
+<p><em>Float absolute tolerance used when computing Kendall tau.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> Bigger than 0.0.</li>
+<li><strong>Type:</strong> float</li>
+<li><strong>Default value:</strong> 1e-6</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Solver</p>
+<p><em>Which solver is used.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Coin-Or CBC (version included in Pulp) (XMCDA label : cbc) (default)</li>
+<li>Choco (version included in Pulp) (XMCDA label : choco)</li>
+<li>GLPK (XMCDA label : glpk)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> programParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;programParameters&gt;
+    &lt;!-- %N --&gt;
+    &lt;programParameter id="discrimination_threshold" name="Discrimination threshold"&gt;
+            &lt;values&gt;
+            &lt;value&gt;
+                        &lt;real&gt;%2&lt;/real&gt;
+            &lt;/value&gt;
+            &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="monotonicity_threshold" name="Monotonicity threshold"&gt;
+            &lt;values&gt;
+            &lt;value&gt;
+                        &lt;real&gt;%3&lt;/real&gt;
+            &lt;/value&gt;
+            &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="ac_epsilon" name="Analytic center epsilon"&gt;
+            &lt;values&gt;
+            &lt;value&gt;
+                        &lt;real&gt;%7&lt;/real&gt;
+            &lt;/value&gt;
+            &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="newton_step_coeff" name="Newton step coefficient"&gt;
+            &lt;values&gt;
+            &lt;value&gt;
+                        &lt;real&gt;%8&lt;/real&gt;
+            &lt;/value&gt;
+            &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="significative_figures" name="Significative figures"&gt;
+            &lt;values&gt;
+            &lt;value&gt;
+                        &lt;integer&gt;%5&lt;/integer&gt;
+            &lt;/value&gt;
+            &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="atol" name="Absolute tolerance"&gt;
+            &lt;values&gt;
+            &lt;value&gt;
+                        &lt;real&gt;%6&lt;/real&gt;
+            &lt;/value&gt;
+            &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="solver" name="Solver"&gt;
+            &lt;values&gt;
+            &lt;value&gt;
+                        &lt;label&gt;%4&lt;/label&gt;
+            &lt;/value&gt;
+            &lt;/values&gt;
+    &lt;/programParameter&gt;
+&lt;/programParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="acuta-pyxmcda-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">valueFunctions</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">valuesErrors</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="value-functions">
+<span id="acuta-pyxmcda-valuefunctions"></span><h3>value functions</h3>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>Optimal value functions found by the service.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaFunctions</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="values-errors">
+<span id="acuta-pyxmcda-valueserrors"></span><h3>values errors</h3>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<dl class="docutils">
+<dt>Optimal values errors found by the service for the reference alternatives.</dt>
+<dd>The 2 values for each alternatives are respectively sigma+ and sigma-.
+As noted in (Munda, 2005).</dd>
+</dl>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="acuta-pyxmcda-messages"></span><h3>messages</h3>
+<div class="section" id="id22">
+<h4>Description:</h4>
+<p>Status messages.</p>
+</div>
+<div class="section" id="id23">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-ACUTA-PyXMCDA.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

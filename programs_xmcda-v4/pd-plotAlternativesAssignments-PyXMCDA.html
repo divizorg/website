@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="plotalternativesassignments">
+<span id="plotalternativesassignments-pyxmcda"></span><h1>plotAlternativesAssignments</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PyXMCDA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.1</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Generate plots representing provided alternativesAssignments as well as the dot files generating these plots.
+Alternatives can be assigned to either a category, a categories set or a categories interval.
+Graphviz dot program and format are used by this service.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Nicolas Duminy (<a class="reference external" href="mailto://nicolas.duminy%40telecom-bretagne.eu" rel="nofollow">nicolas<span>.</span>duminy<span>@</span>telecom-bretagne<span>.</span>eu</a>)</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://gitlab.com/nduminy/ws-pyxmcda" rel="nofollow">https://gitlab.com/nduminy/ws-pyxmcda</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">alternatives</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">categories</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">categoriesSets</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">alternativesAssignments</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">categoriesValues</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">parameters</span></a> <em>(optional)</em></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="plotalternativesassignments-pyxmcda-alternatives"></span><h3>alternatives</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>The alternatives to be plotted. All are plotted if not provided.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories">
+<span id="plotalternativesassignments-pyxmcda-categories"></span><h3>categories</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The categories to be plotted. All are plotted if not provided.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categories</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories-sets">
+<span id="plotalternativesassignments-pyxmcda-categoriessets"></span><h3>categories sets</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The categories sets assignable. Mandatory if alternatives are assigned to categoriesSets.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesSets</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives-assignments">
+<span id="plotalternativesassignments-pyxmcda-alternativesassignments"></span><h3>alternatives assignments</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The alternatives ssignments to be plotted.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAssignments</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories-values">
+<span id="plotalternativesassignments-pyxmcda-categoriesvalues"></span><h3>categories values</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<dl class="docutils">
+<dt>The categories values ranking provided categories. Mandatory if alternatives are assigned to categoriesIntervals.</dt>
+<dd>Used to order categories in plot. Only read if categories are supplied.</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="plotalternativesassignments-pyxmcda-parameters"></span><h3>parameters</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Parameters of the method</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> Color</p>
+<p><em>Color used in the plots.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Black (XMCDA label : black) (default)</li>
+<li>White (XMCDA label : white)</li>
+<li>Red (XMCDA label : red)</li>
+<li>Green (XMCDA label : green)</li>
+<li>Blue (XMCDA label : blue)</li>
+<li>Magenta (XMCDA label : magenta)</li>
+<li>Yellow (XMCDA label : yellow)</li>
+<li>Cyan (XMCDA label : cyan)</li>
+<li>Orange (XMCDA label : orange)</li>
+<li>Pink (XMCDA label : pink)</li>
+<li>Brown (XMCDA label : brown)</li>
+<li>Gray (XMCDA label : gray)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Shape</p>
+<p><em>Shape use to represent categories.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Rectangle (XMCDA label : box)</li>
+<li>Circle (XMCDA label : circle)</li>
+<li>Diamond (XMCDA label : diamond)</li>
+<li>Ellipse (XMCDA label : ellipse)</li>
+<li>Oval (XMCDA label : oval) (default)</li>
+<li>Polygon (XMCDA label : polygon)</li>
+<li>Triangle (XMCDA label : triangle)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Image file extension</p>
+<p><em>File extension of generated image figure.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>.bmp (Windows Bitmap Format) (XMCDA label : bmp)</li>
+<li>.dia (DIA Format) (XMCDA label : dia)</li>
+<li>.fig (FIG graphics format) (XMCDA label : fig)</li>
+<li>.gif (Graphics Interchange Format) (XMCDA label : gif)</li>
+<li>.hpgl (Hewlett Packard Graphic Language 2) (XMCDA label : hpgl)</li>
+<li>.ico (Icon Image File Format) (XMCDA label : ico)</li>
+<li>.jpg (Joint Photographic Experts Group) (XMCDA label : jpg)</li>
+<li>.jpe (Joint Photographic Experts Group) (XMCDA label : jpe)</li>
+<li>.pdf (Portable Document Format) (XMCDA label : pdf)</li>
+<li>.png (Portable Network Graphics) (XMCDA label : png) (default)</li>
+<li>.ps (PostScript) (XMCDA label : ps)</li>
+<li>.ps2 (PostScript for PDF) (XMCDA label : ps2)</li>
+<li>.svg (Scalable Vector Graphics) (XMCDA label : svg)</li>
+<li>.svgz (Compressed Scalable Vector Graphics) (XMCDA label : svgz)</li>
+<li>.tif (Tagged Image File Format) (XMCDA label : tif)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Layout</p>
+<p><em>Defines the plot layout.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Line (XMCDA label : line) (default)</li>
+<li>Column (XMCDA label : column)</li>
+<li>Grid (XMCDA label : grid)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Show values</p>
+<p><em>Defines if values are shown (between parentheses) on the plots or not.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Naming conventions</p>
+<p><em>How categories and alternatives are labelled on the graph.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Only ids are shown (XMCDA label : id)</li>
+<li>Only names are shown (disambiguated by appending the ids, if needed) (XMCDA label : name) (default)</li>
+<li>Names and ids are shown in that order (XMCDA label : name (id))</li>
+<li>Ids and names are shown in that order (XMCDA label : id (name))</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> programParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">programParameters</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">programParameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"color"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Color"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">programParameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">programParameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"shape"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Shape"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">programParameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">programParameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"image_file_extension"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Image file extension"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">programParameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">programParameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"layout"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Layout"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">programParameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">programParameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"show_values"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Show values"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">programParameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">programParameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"naming_conventions"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Naming conventions"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">programParameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">programParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="plotalternativesassignments-pyxmcda-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">glob:alternativesAssignments.{bmp,dia,fig,gif,hpgl,ico,jpg,jpe,pdf,png,ps,ps2,svg,svgz,tif}</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">alternativesAssignments.dot</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="alternatives-assignments-plot">
+<span id="plotalternativesassignments-pyxmcda-alternativesassignmentsplot"></span><h3>alternatives assignments plot</h3>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Image containing all selected alternatives assignments plots. Format corresponds to the one given in parameters (default is .png).</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> None</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives-assignments-plot-script">
+<span id="plotalternativesassignments-pyxmcda-alternativesassignmentsplotscript"></span><h3>alternatives assignments plot script</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Generated graphviz dot script that made the image. Given to enable users to later customize the appearance of the plots.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> None</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="plotalternativesassignments-pyxmcda-messages"></span><h3>messages</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Status messages.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-plotAlternativesAssignments-PyXMCDA.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

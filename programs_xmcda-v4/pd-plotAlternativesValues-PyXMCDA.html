@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="plotalternativesvalues">
+<span id="plotalternativesvalues-pyxmcda"></span><h1>plotAlternativesValues</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PyXMCDA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.3</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Generate plots from provided alternativesValues as well as the scripts generating these plots.</p>
+<p>Colormap can be defined by the user, by giving a list of colors in the parameters.xml file.
+The number of colors is not restrained, and the colormap will linearly distribute the color in their provided order and interpolate between them.
+If only one is provided, it will be used for all data plot.
+Each color is either one of the color names predefined in matplotlib (See <a class="reference external" href="https://matplotlib.org/stable/gallery/color/named_colors.html" rel="nofollow">https://matplotlib.org/stable/gallery/color/named_colors.html#sphx-glr-gallery-color-named-colors-py</a>) or a RGB color defined in hexadecimal &lsquo;#RRGGBB&rsquo;.</p>
+<p>N.B.: When plotting a pie chart, negative and null values are not represented!</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Nicolas Duminy (<a class="reference external" href="mailto://nicolas.duminy%40telecom-bretagne.eu" rel="nofollow">nicolas<span>.</span>duminy<span>@</span>telecom-bretagne<span>.</span>eu</a>)</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://gitlab.com/nduminy/ws-pyxmcda" rel="nofollow">https://gitlab.com/nduminy/ws-pyxmcda</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html"><span class="std std-ref">alternatives</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html"><span class="std std-ref">alternativesValues</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html"><span class="std std-ref">parameters</span></a> <em>(optional)</em></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="plotalternativesvalues-pyxmcda-alternatives"></span><h3>alternatives</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>The alternatives to be plotted. All are plotted if not provided.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives-values">
+<span id="plotalternativesvalues-pyxmcda-alternativesvalues"></span><h3>alternatives values</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The alternatives values.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="plotalternativesvalues-pyxmcda-parameters"></span><h3>parameters</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Parameters of the method</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> X-axis label</p>
+<p><em>X-axis name to display below each plot.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;alternatives&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Y-axis label</p>
+<p><em>Y-axis name to display on the left of each plot.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;values&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Chart title</p>
+<p><em>Title of the chart to be plotted.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;Alternatives values&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Chart type</p>
+<p><em>Type of chart to be plotted.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>bar chart (XMCDA label : barChart) (default)</li>
+<li>pie chart (XMCDA label : pieChart)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Colormap</p>
+<p><em>Type of the colormap.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Monochrome (XMCDA label : monochrome) (default)</li>
+<li>Bicolor (XMCDA label : bicolor)</li>
+<li>Multi-color (advanced) (XMCDA label : multicolor (advanced))</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Nb of colors</p>
+<p><em>The number of colors supplied to define the colormap.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> The value should be between 2 and 10.</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 2</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color</p>
+<p><em>Color to use.</em></p>
+<ul>
+<li><p class="first"><strong>Type:</strong> drop-down list</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>black (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;black&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;) (default)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>red (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;red&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>green (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;green&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>blue (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;blue&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orange (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;orange&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>green (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;green&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>purple (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;purple&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>cyan (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;cyan&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>magenta (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;magenta&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>yellow (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;yellow&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>salmon (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;salmon&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orangered (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;orangered&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>chocolate (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;chocolate&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>greenyellow (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;greenyellow&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>aquamarine (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;aquamarine&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>pink (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;pink&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>grey (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;grey&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>whitesmoke (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;whitesmoke&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> 1st color</p>
+<p><em>First color to use for the colormap.</em></p>
+<ul>
+<li><p class="first"><strong>Type:</strong> drop-down list</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>black (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;black&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;) (default)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>red (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;red&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>green (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;green&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>blue (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;blue&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orange (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;orange&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>green (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;green&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>purple (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;purple&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>cyan (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;cyan&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>magenta (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;magenta&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>yellow (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;yellow&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>salmon (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;salmon&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orange-red (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;orangered&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>chocolate (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;chocolate&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>green-yellow (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;greenyellow&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>aquamarine (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;aquamarine&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>pink (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;pink&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>grey (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;grey&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>whitesmoke (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;whitesmoke&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>white (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;white&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> 2nd color</p>
+<p><em>Second color to use for the colormap.</em></p>
+<ul>
+<li><p class="first"><strong>Type:</strong> drop-down list</p>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li><dl class="first docutils">
+<dt>black (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;black&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;) (default)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>red (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;red&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>green (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;green&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>blue (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;blue&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orange (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;orange&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>green (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;green&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>purple (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;purple&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>cyan (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;cyan&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>magenta (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;magenta&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>yellow (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;yellow&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>salmon (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;salmon&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>orangered (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;orangered&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>chocolate (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;chocolate&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>greenyellow (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;greenyellow&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>aquamarine (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;aquamarine&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>pink (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;pink&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>grey (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;grey&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>whitesmoke (XMCDA label :</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd><p class="first last">&lt;label&gt;whitesmoke&lt;/label&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/value&gt;)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 1 (ex.: cyan or #00FFFF)</p>
+<p><em>1st color (ex.: cyan or #00FFFF)</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 2</p>
+<p><em>2nd color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 3</p>
+<p><em>3rd color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 4</p>
+<p><em>4th color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 5</p>
+<p><em>5th color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 6</p>
+<p><em>6th color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 7</p>
+<p><em>7th color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 8</p>
+<p><em>8th color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 9</p>
+<p><em>9th color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Color 10</p>
+<p><em>10th color</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;black&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Image file extension</p>
+<p><em>File extension of generated image figure.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>.eps (Encapsulated PostScript) (XMCDA label : eps)</li>
+<li>.jpg (Joint Photographic Experts Group) (XMCDA label : jpg)</li>
+<li>.pdf (Portable Document Format) (XMCDA label : pdf)</li>
+<li>.pgf (Progressive Graphics File) (XMCDA label : pgf)</li>
+<li>.png (Portable Network Graphics) (XMCDA label : png) (default)</li>
+<li>.ps (PostScript) (XMCDA label : ps)</li>
+<li>.raw (Raw RGBA bitmap) (XMCDA label : raw)</li>
+<li>.rgba (Silicon Graphics RGB) (XMCDA label : rgba)</li>
+<li>.svg (Scalable Vector Graphics) (XMCDA label : svg)</li>
+<li>.svgz (Compressed Scalable Vector Graphics) (XMCDA label : svgz)</li>
+<li>.tif (Tagged Image File Format) (XMCDA label : tif)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Image file extension</p>
+<p><em>File extension of generated image figure.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>.eps (Encapsulated PostScript) (XMCDA label : eps)</li>
+<li>.jpg (Joint Photographic Experts Group) (XMCDA label : jpg)</li>
+<li>.pdf (Portable Document Format) (XMCDA label : pdf)</li>
+<li>.png (Portable Network Graphics) (XMCDA label : png) (default)</li>
+<li>.svg (Scalable Vector Graphics) (XMCDA label : svg)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Plotter</p>
+<p><em>Plotter used to generate image.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Matplotlib (XMCDA label : matplotlib) (default)</li>
+<li>Gnuplot (XMCDA label : gnuplot)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Order by</p>
+<p><em>Defines how alternatives will be sorted on the figure.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>ids (XMCDA label : id) (default)</li>
+<li>names (XMCDA label : name)</li>
+<li>values (XMCDA label : value)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Reverse order</p>
+<p><em>Defines if order direction should be reversed (descending order) or not.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Mix colors</p>
+<p><em>Defines if colors should be mixed for a better contrast (more color-blind friendly) or not.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Naming conventions</p>
+<p><em>How categories and alternatives are labelled on the graph.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Only ids are shown (XMCDA label : id)</li>
+<li>Only names are shown (disambiguated by appending the ids, if needed) (XMCDA label : name) (default)</li>
+<li>Names and ids are shown in that order (XMCDA label : name (id))</li>
+<li>Ids and names are shown in that order (XMCDA label : id (name))</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> programParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;programParameters&gt;
+    &lt;programParameter id="x_axis" name="X-axis label"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%1&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="y_axis" name="Y-axis label"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%2&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="chart_title" name="Chart title"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%3&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="chart_type" name="Chart type"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%4&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="colors" name="Colors"&gt;
+        &lt;!-- colormap: %colormap / nb colors: %nb_colors --&gt;
+        &lt;values&gt;%5mono%5A%5B%5a%5b%5c%5d%5e%5f%5g%5h%5i%5j
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="image_file_extension" name="Image file extension"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%8a%8b&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="plotter" name="Plotter"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%9&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="order_by" name="Order by"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%10&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="reverse_order" name="Reverse order"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;boolean&gt;%11&lt;/boolean&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="mix_colors" name="Mix colors"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;boolean&gt;%12&lt;/boolean&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+    &lt;programParameter id="naming_conventions" name="Naming conventions"&gt;
+        &lt;values&gt;
+            &lt;value&gt;
+                &lt;label&gt;%13&lt;/label&gt;
+            &lt;/value&gt;
+        &lt;/values&gt;
+    &lt;/programParameter&gt;
+&lt;/programParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="plotalternativesvalues-pyxmcda-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html"><span class="std std-ref">glob:alternativesValues.{bmp,dia,fig,gif,hpgl,ico,jpg,jpe,pdf,png,ps,ps2,svg,svgz,tif}</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html"><span class="std std-ref">glob:plot_alternativesValues.{py,plt}</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="alternatives-values-plot">
+<span id="plotalternativesvalues-pyxmcda-alternativesvaluesplot"></span><h3>alternatives values plot</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Image containing all selected alternatives values plots. Format corresponds to the one given in parameters (default is .png).</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> None</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives-values-plot-script">
+<span id="plotalternativesvalues-pyxmcda-alternativesvaluesplotscript"></span><h3>alternatives values plot script</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Generated Python or Gnuplot script that made the image. Given to enable users to later customize the appearance of the plots. Extension is .py if matplotlib is used, .plt if gnuplot.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> None</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="plotalternativesvalues-pyxmcda-messages"></span><h3>messages</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Status messages.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-plotAlternativesValues-PyXMCDA.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

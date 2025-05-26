@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="capacityentropy">
+<span id="capacityentropy-kappalab"></span><h1>capacityEntropy</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">kappalab</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Computes the normalized entropy of a capacity. The capacity is  given either as its Mobius transform.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Patrick Meyer (<a class="reference external" href="mailto://patrick.meyer%40telecom-bretagne.eu" rel="nofollow">patrick<span>.</span>meyer<span>@</span>telecom-bretagne<span>.</span>eu</a>)</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html"><span class="std std-ref">mobiusCapacity</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html"><span class="std std-ref">kAdditivity</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="capacityentropy-kappalab-criteria"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of criteria. Criteria can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), criteria are considered as active.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteria</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteria</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterion</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">active</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">active</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">criterion</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteria</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="mobiuscapacity">
+<span id="capacityentropy-kappalab-mobiuscapacity"></span><h3>mobiusCapacity</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The Mobius transform of a capacity.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteriaSets,criteriaSetsValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteriaSets</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criteriaSet</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"criteriaSet_1"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">element</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;...&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                <span class="o">&lt;/</span><span class="n">element</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criteriaSet</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteriaSets</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">criteriaSetsValues</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"capacityMoebius"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criteriaSetValue</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">criteriaSetID</span><span class="o">&gt;</span><span class="n">criteriaSet_1</span><span class="o">&lt;/</span><span class="n">criteriaSetID</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;...&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">criteriaSetValue</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteriaSetsValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="kadditivity">
+<span id="capacityentropy-kappalab-kadditivity"></span><h3>kAdditivity</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Indicates the level of k-additivity of the Mobius capacity (the Mobius transform of subsets whose cardinal is superior to k vanishes).</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via the XMCDA file.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> kAdditivity</p>
+<p><em>Indicates the level of k-additivity of the Mobius capacity (the Mobius transform of subsets whose cardinal is superior to k vanishes).</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> The value should be a positive integer, less than or equal to the number of criteria.</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 1</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> programParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;programParameters&gt;
+        &lt;parameter name="kAdditivity"&gt; &lt;!-- name: REQUIRED  --&gt;
+                &lt;values&gt;
+                        &lt;value&gt;
+                                &lt;integer&gt;%1&lt;/integer&gt;
+                        &lt;/value&gt;
+                &lt;/values&gt;
+        &lt;/parameter&gt;
+&lt;/programParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="capacityentropy-kappalab-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html"><span class="std std-ref">capacityEntropy</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="capacityentropy-kappalab-capacityentropy">
+<span id="id6"></span><h3>capacityEntropy</h3>
+<div class="section" id="id7">
+<h4>Description:</h4>
+<p>The normalised entropy of a capacity.</p>
+</div>
+<div class="section" id="id8">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteriaSetsValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;criteriaSets&gt; &lt;!-- definition of a criteriaSet --&gt;
+        &lt;criteriaSet id="criteriaSet_generatedID_1"&gt;
+                &lt;element&gt;
+                        &lt;criterionID&gt;g3&lt;/criterionID&gt;
+                &lt;/element&gt;
+                &lt;element&gt;
+                        &lt;criterionID&gt;g2&lt;/criterionID&gt;
+                &lt;/element&gt;
+                &lt;element&gt;
+                        &lt;criterionID&gt;g1&lt;/criterionID&gt;
+                &lt;/element&gt;
+        &lt;/criteriaSet&gt;
+&lt;/criteriaSets&gt;
+&lt;!-- entropy of a capacity --&gt;
+&lt;criteriaSetsValues mcdaConcept="capacityEntropy"&gt;
+        &lt;criteriaSetValue&gt;
+                &lt;criteriaSetID&gt;criteriaSet_generatedID_1&lt;/criteriaSetID&gt;
+                &lt;values&gt;
+                        &lt;value&gt;
+                                &lt;real&gt;...&lt;/real&gt;
+                        &lt;/value&gt;
+                &lt;/values&gt;
+        &lt;/criteriaSetValue&gt;
+&lt;/criteriaSetsValues&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="capacityentropy-kappalab-messages"></span><h3>messages</h3>
+<div class="section" id="id9">
+<h4>Description:</h4>
+<p>A list of messages generated by the algorithm.</p>
+</div>
+<div class="section" id="id10">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-capacityEntropy-kappalab.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

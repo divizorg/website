@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="hierarchicaldea-valueadditive-smaa-ranks">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put"></span><h1>HierarchicalDEA-ValueAdditive-SMAA_ranks</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<dl class="docutils">
+<dt>Computes ranks for the given DMUs (alternatives) using SMAA-D method and Additive Data Envelopment Analysis Model</dt>
+<dd>with hierarchical structure of inputs and outputs. For given number of samples  returns a matrix with alternatives in each row and rankings in each column. Single cell indicates how many samples of respective alternative gave respective position in ranking.</dd>
+</dl>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><strong>Contact:</strong></dt>
+<dd>Anna Labijak &lt;<a class="reference external" href="mailto://anna.labijak%40cs.put.poznan.pl" rel="nofollow">anna<span>.</span>labijak<span>@</span>cs<span>.</span>put<span>.</span>poznan<span>.</span>pl</a>&gt;</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">units</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">performanceTable</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">inputsOutputs</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">hierarchy</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">weightsLinearConstraints</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">methodParameters</span></a></li>
+</ul>
+<div class="section" id="units">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-units"></span><h3>units</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of alternatives (DMUs).</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternatives</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternatives</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternative</span><span class="o">&gt;</span>
+            <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">alternative</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">alternatives</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performance">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-performancetable"></span><h3>performance</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>A list of alternatives (DMUs) performances (on leaf hierarchy criteria).</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> performanceTable</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">performance</span><span class="o">&gt;</span>
+                                                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                                                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                                <span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                                                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;/</span><span class="n">performance</span><span class="o">&gt;</span>
+                                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                <span class="o">&lt;/</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+                                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                        <span class="o">&lt;/</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="inputs-outputs">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-inputsoutputs"></span><h3>inputs/outputs</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>A list of performance criteria (hierarchy leafs) and their preference direction. List has to contain at least one criterion that will be minimized (input) and at least one criterion that will be maximized (output) for each hierarchy category.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteria</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteria</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterion</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">scale</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                        <span class="o">&lt;/</span><span class="n">scale</span><span class="o">&gt;</span>
+            <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">criterion</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">criteria</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="hierarchy">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-hierarchy"></span><h3>hierarchy</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The hierarchical structure of criteria.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> hierarchy</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">hierarchy</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+            <span class="o">&lt;/</span><span class="n">node</span><span class="o">&gt;</span>
+            <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">node</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">node</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">hierarchy</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="weights-constraints">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-weightslinearconstraints"></span><h3>weights constraints</h3>
+<p><strong>Optional:</strong> yes, disabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>A list of hierarchy criteria linear constraints.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteriaLinearConstraints</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteriaLinearConstraints</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">constraint</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">element</span><span class="o">&gt;</span>
+                                                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                                                <span class="o">&lt;</span><span class="n">coefficient</span><span class="o">&gt;</span>
+                                                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                                <span class="o">&lt;/</span><span class="n">coefficient</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;/</span><span class="n">element</span><span class="o">&gt;</span>
+                                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                        <span class="o">&lt;</span><span class="n">operator</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">operator</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">rhs</span><span class="o">&gt;</span>
+                                                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                        <span class="o">&lt;/</span><span class="n">rhs</span><span class="o">&gt;</span>
+                                <span class="o">&lt;/</span><span class="n">constraint</span><span class="o">&gt;</span>
+                                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                        <span class="o">&lt;/</span><span class="n">criteriaLinearConstraints</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-methodparameters"></span><h3>parameters</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<dl class="docutils">
+<dt>Represents parameters.</dt>
+<dd>&ldquo;number of samples&rdquo; represents the number of samples to generate;
+&ldquo;hierarchy node&rdquo; is the ID of the hierarchy criterion for which the analysis should be performed;
+&ldquo;transformToUtilities&rdquo; means if data should be tranformed into values from range [0-1];
+&ldquo;boundariesProvided&rdquo; means if inputsOutputs file contains information about min and max data for each factor.</dd>
+</dl>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul class="simple">
+<li>Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</li>
+<li><strong>Name:</strong> number of samples<ul>
+<li><strong>Constraint description:</strong> The value should be a positive integer.</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 100</li>
+</ul>
+</li>
+<li><strong>Name:</strong> hierarchy node<ul>
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;root&rdquo;</li>
+</ul>
+</li>
+<li><strong>Name:</strong> transform to utilities<ul>
+<li><strong>Default value:</strong> true</li>
+</ul>
+</li>
+<li><strong>Name:</strong> boundaries provided<ul>
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+<li><strong>Name:</strong> random seed (-1 for default time-based seed)<ul>
+<li><strong>Constraint description:</strong> The value should be a non-negative integer or -1 if no constant seed required.</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> -1</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"samplesNb"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"hierarchyNode"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"transformToUtilities"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"boundariesProvided"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"randomSeed"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">rankAcceptabilityIndices</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">avgRank</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="rank-acceptability-indices">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-rankacceptabilityindices"></span><h3>rank acceptability indices</h3>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>A performance table for given alternatives. Single performance consists of attribute criterionID representing certain ranking, and a value representing ratio of samples attaining this ranking.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> performanceTable</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;</span><span class="n">performance</span><span class="o">&gt;</span>
+                                                <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;</span> <span class="n">Rank</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+                                                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                                        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                                        <span class="o">&lt;/</span><span class="n">performance</span><span class="o">&gt;</span>
+                                        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                                <span class="o">&lt;/</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+                        <span class="o">&lt;/</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="average-rank">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-avgrank"></span><h3>average rank</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>A list of alternatives with average rank (obtained for given sample).</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+                                  <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                                  <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                                          <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                                  <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+                                <span class="o">&lt;/</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+                                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+                        <span class="o">&lt;/</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="hierarchicaldea-valueadditive-smaa-ranks-put-messages"></span><h3>messages</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>A list of messages generated by the algorithm.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-HierarchicalDEA-ValueAdditive-SMAA_ranks-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

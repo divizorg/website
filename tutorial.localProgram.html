@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/tutorial.localProgram.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="call-local-programs-in-diviz">
+<span id="tutorial-localprogram"></span><span id="index-0"></span><h1>Call local programs in diviz</h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="short-description-of-the-tutorial">
+<h2>Short description of the tutorial</h2>
+<p>In this tutorial we show how to call a local program in diviz.</p>
+</div>
+<div class="section" id="detailed-description-of-the-tutorial">
+<h2>Detailed description of the tutorial</h2>
+<p>This tutorial focusses on the following aspects:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Creating a <em>local program</em> box in diviz;</li>
+<li>Configuring this program and executing it;</li>
+<li>Examples of other local executions.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tutorial">
+<h2>Tutorial</h2>
+<p>We suppose for this tutorial that you are running diviz on a Linux computer and that you have an sh-compatible command language interpreter installed.</p>
+<p>First you need to run diviz. In the list of available programs (on your right hand side) you can identify the program called <strong>generic_program</strong>.</p>
+<p>Create a new empty workflow (see this <a class="reference internal" href="/tutorial.diviz.html"><span class="std std-ref">tutorial</span></a> to learn how to do this) and drag and drop <strong>generic_program</strong> in the workspace. You should now have a program called <strong>generic_program-1</strong> in your workspace with one input (<code class="docutils literal notranslate"><span class="pre">infile1</span></code>) and one output (<code class="docutils literal notranslate"><span class="pre">outfile1</span></code>).</p>
+<p>If you double-click on <strong>generic_program-1</strong>, its properties window will open. There you can specify the number of inputs and outputs you need for your program. For this example let us stay with one input and one output file.</p>
+<p>For this tutorial, the task of <strong>generic_program-1</strong> should be to add an XML comment at the end of an input XMCDA file and to output the result in an XMCDA file.</p>
+<blockquote>
+<div>In an MCDA context this might be a useless task. However it allows us to easily present the main features of the local executions in diviz in a very easy and intuitive way. A more complete and MCDA-related tutorial for local programs in R can be found <a class="reference internal" href="/tutorial.localRScript.html"><span class="std std-ref">here</span></a>.</div></blockquote>
+<p>To do this in <strong>bash</strong> we would probably write something like:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">infile</span> <span class="n">outfile</span>
+<span class="n">echo</span> <span class="s1">'&lt;!--This is a comment.--&gt;'</span> <span class="o">&gt;&gt;</span> <span class="n">outfile</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>To do this in diviz in the workflow that you just created, in the properties window of <strong>generic_program-1</strong>, in the <strong>cmdline</strong> field enter :</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sh</span> <span class="o">-</span><span class="n">s</span> <span class="n">infile1</span> <span class="n">outfile1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>This defines the command line which should be used by <strong>generic_program-1</strong>. To be preciser, <strong>sh</strong> will read commands from the standard input (-s argument) and the two arguments <strong>infile1</strong> and <strong>outfile1</strong> will be sent to the interpreter.</p>
+<p>In order to specify the commands which <strong>sh</strong> should read from the standard input, we can check the <strong>Use a script</strong> option and enter the commands to be executed in the textbox which has just appeared:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cp $1 $2
+echo '&lt;!--I have been written by a local script.--&gt;' &gt;&gt; $2
+</pre></div>
+</div>
+</div></blockquote>
+<p>To check that the program that you just created works as desired, connect an input file (for example <a class="reference download internal" download="" href="/_downloads/77d13d89b1aeeef92e96e1866649b076/alternatives.xml"><code class="xref download docutils literal notranslate"><span class="pre">alternatives.xml</span></code></a>) to <strong>generic_program-1</strong> and execute the workflow (see this <a class="reference internal" href="/tutorial.diviz.html"><span class="std std-ref">tutorial</span></a> to learn how to do this). The last line of the output file produced by <strong>generic_program-1</strong> should be the XML comment <code class="docutils literal notranslate"><span class="pre">&lt;!--I</span> <span class="pre">have</span> <span class="pre">been</span> <span class="pre">written</span> <span class="pre">by</span> <span class="pre">a</span> <span class="pre">local</span> <span class="pre">script.--&gt;</span></code> (to check this, click on the output file, and then in the <em>results</em> window click on <strong>XML view</strong> and scroll down to the bottom of the file).</p>
+<div class="section" id="further-examples">
+<h3>Further examples</h3>
+<p>The following examples all number the lines of the input file. Again, in practice this might not make much sense in the MCDA context, but it is a simple example which demonstrates the use of scripts in diviz. We show how to do this in <strong>Python</strong>, via a <strong>Shell</strong> script, and <strong>R</strong>.</p>
+<div class="section" id="python">
+<h4>Python</h4>
+<p><em>cmdline</em></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span> <span class="n">infile1</span> <span class="n">outfile1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>script</em></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span> <span class="s2">"argv: "</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span>
+<span class="c1"># here, sys.argv[0] is '-'</span>
+<span class="nb">input</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">output</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">idx</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">output</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="nb">input</span><span class="p">):</span>
+  <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"</span><span class="si">%i</span><span class="s2">: </span><span class="si">%s</span><span class="s2">"</span><span class="o">%</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">line</span><span class="p">))</span>
+  <span class="n">idx</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">output</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>Remarks</em></p>
+<blockquote>
+<div><ul class="simple">
+<li>the cmdline launches python on the script file;</li>
+<li>the script reads its arguments from the command-line; another solution would be to hard-code the names &ldquo;infile1&rdquo; and &ldquo;outfile1&rdquo; in the script itself.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="shell">
+<h4>Shell</h4>
+<p><em>cmdline</em></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sh</span> <span class="o">-</span><span class="n">s</span> <span class="n">infile1</span> <span class="n">outfile1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>script</em></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for n in $(seq 0 $#); do echo \$$n=${!n}; done
+cat -n $1 &gt; $2
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>Remarks</em></p>
+<blockquote>
+<div>The same thing can be done without a script, using the cmdline: sh -c &ldquo;cat -n infile1 &gt; outfile1&rdquo;</div></blockquote>
+</div>
+<div class="section" id="r">
+<h4>R</h4>
+<p><em>cmdline</em></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">--</span><span class="n">slave</span> <span class="o">--</span><span class="n">vanilla</span> <span class="o">--</span><span class="n">args</span> <span class="n">infile1</span> <span class="n">outfile1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>script</em></p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">args</span><span class="o">=</span><span class="n">commandArgs</span><span class="p">(</span><span class="n">trailingOnly</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">lines</span><span class="o">=</span><span class="n">readLines</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">n</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">idx</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">idx</span><span class="o">=</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span>
+  <span class="n">cat</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">append</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><em>Remarks</em></p>
+<blockquote>
+<div><p>If you prefer, you can also pass the path to the script file as a command-line argument. In this case, the command-line becomes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">--</span><span class="n">slave</span> <span class="o">--</span><span class="n">vanilla</span> <span class="o">--</span><span class="n">file</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">script</span><span class="o">.</span><span class="n">R</span> <span class="o">--</span><span class="n">args</span> <span class="n">infile1</span> <span class="n">outfile2</span><span class="s1">'</span>
+</pre></div>
+</div>
+<p>and the file /path/to/script.R contains the same script as above. Since there is no need to &lsquo;Use a script&rsquo; anymore, this option should be unchecked.</p>
+<p>It is also possible to provide the script as a file in your workspace which is connected to the <strong>generic_program-1</strong> box. To do so, you need to check the option &lsquo;Provide the script as a file&rsquo;, which adds an input called <code class="docutils literal notranslate"><span class="pre">script</span></code> to the <strong>generic_program-1</strong> box. You just have to connect the file representing your script to this entry. The command-line now becomes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">--</span><span class="n">slave</span> <span class="o">--</span><span class="n">vanilla</span> <span class="o">--</span><span class="n">file</span><span class="o">=</span><span class="n">script</span> <span class="o">--</span><span class="n">args</span> <span class="n">infile1</span> <span class="n">outfile2</span><span class="s1">'</span>
+</pre></div>
+</div>
+<p>This has a big advantage, as it allows to easily share your script with the workflow (workflow menu, export workflow with input files item).</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/tutorial.localProgram.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

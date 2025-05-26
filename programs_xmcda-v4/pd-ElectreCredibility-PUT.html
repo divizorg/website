@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="electrecredibility">
+<span id="electrecredibility-put"></span><h1>ElectreCredibility</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">0.2.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>ElectreCredibility - computes credibility matrix using procedure which is common to the most methods from the Electre family.</p>
+<p>The key feature of this module is its flexibility in terms of the types of elements accepted as input - concordance or discordance may be a result of the following comparisons: alternatives vs alternatives, alternatives vs boundary profiles and alternatives vs central (characteristic) profiles, and discordance may be provided both in non-aggregated (&lsquo;partial&rsquo;) and aggregated form (think of discordances in Electre TRI and Electre Is methods).</p>
+<ul class="simple">
+<li><strong>Web page:</strong> <a class="reference external" href="http://github.com/xor-xor/electre_diviz" rel="nofollow">http://github.com/xor-xor/electre_diviz</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">concordance</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">discordance</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">classes_profiles</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">method_parameters</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="electrecredibility-put-input1"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Alternatives to consider.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="concordance">
+<span id="electrecredibility-put-input3"></span><h3>concordance</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Concordance matrix with aggregated concordance indices (i.e. one index per pair of alternatives or alternatives/profiles).</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="discordance">
+<span id="electrecredibility-put-input4"></span><h3>discordance</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Discordance indices provided in non-aggregated (&lsquo;partial&rsquo;) or aggregated form. In the former case, &lsquo;with_denominator&rsquo; parameter (see below) should be set to &lsquo;true&rsquo;.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="classes-profiles">
+<span id="electrecredibility-put-input2"></span><h3>classes_profiles</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Definitions of profiles (boundary or central) which should be used for classes (categories) representation.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesProfiles</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="method-parameters">
+<span id="electrecredibility-put-input5"></span><h3>method_parameters</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>A set of parameters provided to tune up the module&rsquo;s operation.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> comparison_with</p>
+<p><a href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="problematic" id="id10">*</span></a>This parameter specifies the type of elements provided for comparison.</p>
+</li>
+</ul>
+<p>Choosing &lsquo;boundary_profiles&rsquo; or &lsquo;central_profiles&rsquo; requires providing inputs &lsquo;classes_profiles&rsquo; and &lsquo;profiles_performance_table&rsquo; as well (which are optional by default).*</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>alternatives vs alternatives (XMCDA label : alternatives) (default)</li>
+<li>alternatives vs boundary profiles (XMCDA label : boundary_profiles)</li>
+<li>alternatives vs central (characteristic) profiles (XMCDA label : central_profiles)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>Name:</strong> with_denominator</p>
+<p><a href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="problematic" id="id12">*</span></a>This parameter specifies if you want to take into account only sufficiently great discordance (by using &lsquo;1 - d_j(a, b) / 1 - C(a, b)&rsquo; instead of &lsquo;1 - d_j(a, b)&rsquo; in credibility&rsquo;s equation).</p>
+</li>
+</ul>
+<p>In case of selecting this option, only discordance indices for which d_j(a, b) &gt; C(a, b) holds are taken into account.*</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>Default value:</strong> true</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first"><strong>Name:</strong> only_max_discordance</p>
+<p><em>Use only maximum discordance index in discordance aggregation part of credibility&rsquo;s equation (i.e. &lsquo;1 - max(d_j(a, b))&rsquo;). When &lsquo;with_denominator&rsquo; is set to &lsquo;true&rsquo;, this parameter is ignored.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> use_partials</p>
+<p><em>This parameter specifies whether the discordance indices are provided in non-aggregated form.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> true</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programParameters</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;programParameters&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;parameter name=&rdquo;comparison_with&rdquo;&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;label&gt;%1&lt;/label&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/values&gt;</p>
+</dd>
+</dl>
+<p>&lt;/parameter&gt;
+&lt;parameter name=&rdquo;with_denominator&rdquo;&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;boolean&gt;%2&lt;/boolean&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p>&lt;/values&gt;</p>
+</div></blockquote>
+<p>&lt;/parameter&gt;
+&lt;parameter name=&rdquo;only_max_discordance&rdquo;&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;boolean&gt;%3&lt;/boolean&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p>&lt;/values&gt;</p>
+</div></blockquote>
+<p>&lt;/parameter&gt;
+&lt;parameter name=&rdquo;use_partials&rdquo;&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;values&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;boolean&gt;%4&lt;/boolean&gt;</dd>
+</dl>
+<p class="last">&lt;/value&gt;</p>
+</dd>
+</dl>
+<p>&lt;/values&gt;</p>
+</div></blockquote>
+<p class="last">&lt;/parameter&gt;</p>
+</dd>
+</dl>
+<p>&lt;/programParameters&gt;</p>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="electrecredibility-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">credibility</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="credibility">
+<span id="electrecredibility-put-output1"></span><h3>credibility</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Credibility matrix computed from the given data.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesMatrix</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="electrecredibility-put-output2"></span><h3>messages</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Messages or errors generated by this module.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-ElectreCredibility-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

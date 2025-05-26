@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/tutorial.import.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="import-of-a-workflow-in-diviz">
+<span id="tutorial-import"></span><span id="index-0"></span><h1>Import of a workflow in diviz</h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="short-description-of-the-tutorial">
+<h2>Short description of the tutorial</h2>
+<p>This tutorial presents you how to import existing workflows into diviz.</p>
+</div>
+<div class="section" id="detailed-description-of-the-tutorial">
+<h2>Detailed description of the tutorial</h2>
+<p>This tutorial focusses on the following aspects:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Importing of an existing workflow;</li>
+<li>Execution of the workflow;</li>
+<li>Visualisation of the results.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tutorial">
+<h2>Tutorial</h2>
+<p>First start by downloading the following workflow file:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference download internal" download="" href="/_downloads/5a3639cb5f10bd0a1803279a549b293d/bigMix.dvz"><code class="xref download docutils literal notranslate"><span class="pre">bigMix.dvz</span></code></a></li>
+</ul>
+</div></blockquote>
+<p>Then run diviz.</p>
+<p>After the splash screen you can see an empty workspace (as in Figure <a class="reference internal" href="/tutorial.import.html"><span class="std std-ref">Empy diviz screen</span></a>).
+The left panel is used to display the open workflows and their past executions.
+The right pane contains the list of available elementary components.
+The center pane is used to construct and display the workflows.</p>
+<div class="figure" id="id1">
+<span id="fig-tuto-diviz1"></span>
+<p class="caption"><span class="caption-text"><em>Empy diviz screen</em></span></p>
+</div>
+<p>To load the workflow that you just downloaded, open the workflow menu and click on &ldquo;Import as new&rdquo; and select the file that you just downloaded.</p>
+<p>Then choose a directory where the data files contained in the workflow should be saved.</p>
+<p>The workflow stored in the file <cite>bigMix.dvz</cite> is then displayed and you can run it or modify it (see Figure <a class="reference internal" href="/tutorial.import.html"><span class="std std-ref">Loaded workflow</span></a>).</p>
+<div class="figure" id="id2">
+<span id="fig-tuto-diviz2"></span>
+<p class="caption"><span class="caption-text"><em>Loaded workflow</em></span></p>
+</div>
+<p>You can execute it via the <strong>Execution</strong> menu via the <strong>Run</strong> entry.</p>
+<p>After the workflow has been successfully executed, you can click on the entry below the name of your workflow in the left panel to view the results in the panel which has appeared under your workflow.</p>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/tutorial.import.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="xyplotalternativesvalues">
+<span id="xyplotalternativesvalues-utar"></span><h1>XYPlotAlternativesValues</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">UTAR</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Give a graphical XY representation of two alternativesValues (ex: ranking), providing an efficient way to compare them</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Boris Leistedt (<a class="reference external" href="mailto://boris.leistedt%40gmail.com" rel="nofollow">boris<span>.</span>leistedt<span>@</span>gmail<span>.</span>com</a>)</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html"><span class="std std-ref">alternativesValues1</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html"><span class="std std-ref">alternativesValues2</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="xyplotalternativesvalues-utar-alt"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of alternatives. Alternatives can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), alternatives are considered as active.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;alternatives&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;alternative id=&rdquo;&hellip;&rdquo;&gt;</dt>
+<dd>&lt;active&gt;true&lt;/active&gt;
+[&hellip;]</dd>
+</dl>
+<p class="last">&lt;/alternative&gt;</p>
+</dd>
+</dl>
+<p>&lt;/alternatives&gt;</p>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesvalues1">
+<span id="xyplotalternativesvalues-utar-alternativesvalues1"></span><h3>alternativesValues1</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Values of the first set of alternatives.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;alternativesValues&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;alternativeValue&gt;</dt>
+<dd><p class="first">&lt;alternativeID[&hellip;]&lt;/alternativeID&gt;
+&lt;values&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;real&gt;[&hellip;]&hellip;/real&gt;</dd>
+</dl>
+<p>&lt;/value&gt;</p>
+</div></blockquote>
+<p class="last">&lt;/values&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/alternativeValue&gt;</p>
+</dd>
+</dl>
+<p>&lt;/alternativesValues&gt;</p>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesvalues2">
+<span id="xyplotalternativesvalues-utar-alternativesvalues2"></span><h3>alternativesValues2</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Values of the first set of alternatives.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;alternativesValues&gt;</dt>
+<dd><dl class="first docutils">
+<dt>&lt;alternativeValue&gt;</dt>
+<dd><p class="first">&lt;alternativeID[&hellip;]&lt;/alternativeID&gt;
+&lt;values&gt;</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;value&gt;</dt>
+<dd>&lt;real&gt;[&hellip;]&hellip;/real&gt;</dd>
+</dl>
+<p>&lt;/value&gt;</p>
+</div></blockquote>
+<p class="last">&lt;/values&gt;</p>
+</dd>
+</dl>
+<p class="last">&lt;/alternativeValue&gt;</p>
+</dd>
+</dl>
+<p>&lt;/alternativesValues&gt;</p>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="xyplotalternativesvalues-utar-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html"><span class="std std-ref">alternativesValuesXYPlot.png</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html"><span class="std std-ref">message</span></a></li>
+</ul>
+<div class="section" id="xy-representation-png">
+<span id="xyplotalternativesvalues-utar-alternativesvaluesplotcomparison"></span><h3>XY representation (png)</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The png image of the plot generated by the R statistical software.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> other</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="xyplotalternativesvalues-utar-logmessage"></span><h3>messages</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>logMessage</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+<li><strong>Code:</strong></li>
+</ul>
+<dl class="docutils">
+<dt>&lt;programExecutionResult&gt;</dt>
+<dd><p class="first">&lt;status&gt;ok&lt;/status&gt;
+&lt;messages&gt;</p>
+<blockquote>
+<div>&lt;message&gt; [&hellip;] &lt;/message&gt;</div></blockquote>
+<p class="last">&lt;/messages&gt;</p>
+</dd>
+</dl>
+<p>&lt;/programExecutionResult&gt;</p>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-XYPlotAlternativesValues-UTAR.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

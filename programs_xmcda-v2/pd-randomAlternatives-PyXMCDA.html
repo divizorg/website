@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="randomalternatives">
+<span id="randomalternatives-pyxmcda"></span><h1>randomAlternatives</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PyXMCDA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>This web service allows to create a simple list of alternative by simply providing the desired number of alternatives, or a list of alternatives names.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Thomas Veneziano (<a class="reference external" href="mailto://thomas.veneziano%40uni.lu" rel="nofollow">thomas<span>.</span>veneziano<span>@</span>uni<span>.</span>lu</a>)</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html"><span class="std std-ref">nbAlternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html"><span class="std std-ref">alternativesPrefix</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html"><span class="std std-ref">alternativesNames</span></a> <em>(optional)</em></li>
+</ul>
+<div class="section" id="nbalternatives">
+<span id="randomalternatives-pyxmcda-nbalternatives"></span><h3>nbAlternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Indicates the desired number of alternatives. It must be a strict positive integer.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> nbAlternatives</p>
+<p><em>Indicates the desired number of alternatives.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> The value should be a positive integer.</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 2</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameter
+         name="nbAlternatives"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;value&gt;
+            &lt;integer&gt;%1&lt;/integer&gt;
+        &lt;/value&gt;
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesprefix">
+<span id="randomalternatives-pyxmcda-alternativesprefix"></span><h3>alternativesPrefix</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Indicates the desired prefix for the name of the alternatives. If not provided, alternatives will be called a1, a2, &hellip; If provided, alternatives will be called prefix1, prefix2, &hellip; Note that it will only be used if you provide a number of alternatives.</p>
+</div>
+<div class="section" id="id3">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> alternativesPrefix</p>
+<p><em>Indicates the desired prefix for the alternatives.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;a&rdquo;</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameter
+         name="alternativesPrefix"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;value&gt;
+            &lt;label&gt;%1&lt;/label&gt;
+        &lt;/value&gt;
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesnames">
+<span id="randomalternatives-pyxmcda-alternativesnames"></span><h3>alternativesNames</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id5">
+<h4>Description:</h4>
+<p>Indicates a list of alternatives names. When supplied, the service ignores parameters nbAlternatives and alternativesPrefix</p>
+</div>
+<div class="section" id="id6">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;methodParameters&gt;
+    &lt;parameters
+         name="alternativesNames"&gt; &lt;!-- REQUIRED  --&gt;
+        &lt;parameter&gt;&lt;value&gt;
+            &lt;label&gt;[...]&lt;/label&gt;
+        &lt;/value&gt;&lt;/parameter&gt;
+        [..]
+    &lt;/parameter&gt;
+&lt;/methodParameters&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="randomalternatives-pyxmcda-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="randomalternatives-pyxmcda-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id7">
+<h4>Description:</h4>
+<p>A list of alternatives with active tags.</p>
+</div>
+<div class="section" id="id8">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="randomalternatives-pyxmcda-messages"></span><h3>messages</h3>
+<div class="section" id="id9">
+<h4>Description:</h4>
+<p>A list of messages generated by the algorithm.</p>
+</div>
+<div class="section" id="id10">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-randomAlternatives-PyXMCDA.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

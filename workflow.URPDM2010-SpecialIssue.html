@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/workflow.URPDM2010-SpecialIssue.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<span class="target" id="index-0"></span><div class="section" id="acuta-and-promethee-comparing-rankings">
+<h1>ACUTA and PROMETHEE: comparing rankings</h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="short-description">
+<h2>Short description</h2>
+<p>This workflow compares the ranking obtained by the ACUTA algorithm with the one obtained with the PROMETHEE method, on the classical &ldquo;Thierry&rsquo;s sports car choice&rdquo; example <a class="reference internal" href="/workflow.x4.URPDM2010-SpecialIssue.html" id="id1">[BouyssouEtAl2000]</a>, based on the example for the URPDM2010 conference in Coimbra, Portugal. It extends this example for the special issue of a journal linked to the conference.</p>
+</div>
+<div class="section" id="detailed-description">
+<h2>Detailed description</h2>
+<p>This workflow contains 3 parts:</p>
+<ul class="simple">
+<li>the upper area represents the use of the PROMETHEE method to obtain a ranking of the alternatives;</li>
+<li>The lower area represents the disaggregation technique ACUTA <a class="reference internal" href="/workflow.x4.method.ACUTA.html" id="id2">[BousEtAl2010]</a> to compute partial value functions on basis of a ranking given as an input;</li>
+<li>the right part compares the output of the two techniques.</li>
+</ul>
+<p>This example is discussed in further details in <a class="reference internal" href="/workflow.x4.URPDM2010-SpecialIssue.html" id="id3">[BigaretMeyer2011]</a>.</p>
+</div>
+<div class="section" id="screenshot">
+<h2>Screenshot</h2>
+<div class="figure">
+<a class="reference internal image-reference" href="/_images/article-URPDM2010-SpecialIssue-BigaretMeyer.png"></a>
+</div>
+</div>
+<div class="section" id="download-link">
+<h2>Download link</h2>
+<p><a class="reference download internal" download="" href="/_downloads/11122ca80de5545e11907dffc955788a/article-URPDM2010-SpecialIssue-BigaretMeyer.dvz"><code class="xref download docutils literal notranslate"><span class="pre">article-URPDM2010-SpecialIssue-BigaretMeyer.dvz</span></code></a></p>
+<p>Click <a class="reference internal" href="/tutorial.import.html"><span class="std std-ref">here</span></a> for a detailed description on how to import the workflow into diviz.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography</h2>
+<table class="docutils citation" frame="void" id="bigaretmeyer2011" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="/workflow.URPDM2010-SpecialIssue.html">[BigaretMeyer2011]</a></td><td>Meyer P, Bigaret S, diviz: a tool for modeling, processing and sharing algorithmic workflows in MCDA, (submitted) (preliminary <a class="reference download internal" download="" href="/_downloads/fe39050269eefe0b17dfd7a4cb289c63/divizURPDM2010specialIssue.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>).</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bousetal2010" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="/workflow.URPDM2010-SpecialIssue.html">[BousEtAl2010]</a></td><td>Bous G, Fortemps P, Glineur F, Pirlot M, ACUTA: A novel method for eliciting additive value functions on the basis of holistic preference statements, European Journal of Operational Research, submitted, 2010.</td></tr>
+</tbody>
+</table>
+<table class="docutils citation" frame="void" id="bouyssouetal2000" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="/workflow.URPDM2010-SpecialIssue.html">[BouyssouEtAl2000]</a></td><td>Bouyssou D, Marchant T, Pirlot M, Perny P, Tsouki&agrave;s A, Vincke P. Evaluation and decision models: A critical perspective, Kluwer, 2000.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/workflow.URPDM2010-SpecialIssue.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

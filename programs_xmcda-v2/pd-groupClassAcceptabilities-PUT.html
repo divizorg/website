@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-groupClassAcceptabilities-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="groupclassacceptabilities">
+<span id="groupclassacceptabilities-put"></span><h1>groupClassAcceptabilities</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Module for calculation group class acceptabilities basing on the assignments to classes of each decision maker.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Magdalena Dziecielska &lt;<a class="reference external" href="mailto://magdalenadziecielska6%40gmail.com" rel="nofollow">magdalenadziecielska6<span>@</span>gmail<span>.</span>com</a>&gt;</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://github.com/MagdalenaDziecielska/PrometheeDiviz" rel="nofollow">https://github.com/MagdalenaDziecielska/PrometheeDiviz</a></li>
+<li><dl class="first docutils">
+<dt><strong>Reference:</strong></dt>
+<dd>S. Damart, L.C. Dias and V. Mousseau; Supporting groups in sorting
+decisions: Methodology and use of a multi-criteria aggregation/disaggregation DSS.;
+Decision Support Systems 43 (2007) 1464?1475</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_1</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_2</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_3</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_4</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_5</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_6</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_7</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_8</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_9</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">assignments_10</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">categories</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">categories_values</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="groupclassacceptabilities-put-input1"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Alternatives to consider.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-1">
+<span id="groupclassacceptabilities-put-input2"></span><h3>assignments 1</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 1.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-2">
+<span id="groupclassacceptabilities-put-input3"></span><h3>assignments 2</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 2.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-3">
+<span id="groupclassacceptabilities-put-input4"></span><h3>assignments 3</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 3.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-4">
+<span id="groupclassacceptabilities-put-input5"></span><h3>assignments 4</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 4.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-5">
+<span id="groupclassacceptabilities-put-input6"></span><h3>assignments 5</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 5.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-6">
+<span id="groupclassacceptabilities-put-input7"></span><h3>assignments 6</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 6.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-7">
+<span id="groupclassacceptabilities-put-input8"></span><h3>assignments 7</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 7.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-8">
+<span id="groupclassacceptabilities-put-input9"></span><h3>assignments 8</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 8.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-9">
+<span id="groupclassacceptabilities-put-input10"></span><h3>assignments 9</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 9.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="assignments-10">
+<span id="groupclassacceptabilities-put-input11"></span><h3>assignments 10</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>Assignments of each alternative to the categories interval as an upper and lower bound for decision maker 10.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories">
+<span id="groupclassacceptabilities-put-input12"></span><h3>categories</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id22">
+<h4>Description:</h4>
+<p>Definitions of categories.</p>
+</div>
+<div class="section" id="id23">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories-values">
+<span id="groupclassacceptabilities-put-input13"></span><h3>categories values</h3>
+<div class="section" id="id24">
+<h4>Description:</h4>
+<p>Definitions of categories and their marks (higher mark means better category).</p>
+</div>
+<div class="section" id="id25">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="groupclassacceptabilities-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">alternatives_support</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">unimodal_alternatives_support</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-groupClassAcceptabilities-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="alternatives-support">
+<span id="groupclassacceptabilities-put-output1"></span><h3>alternatives support</h3>
+<div class="section" id="id26">
+<h4>Description:</h4>
+<p>Alternatives support represented as percentage value</p>
+</div>
+<div class="section" id="id27">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="unimodal-alternatives-support">
+<span id="groupclassacceptabilities-put-output2"></span><h3>unimodal alternatives support</h3>
+<div class="section" id="id28">
+<h4>Description:</h4>
+<p>Unimodal alternatives support represented as percentage value</p>
+</div>
+<div class="section" id="id29">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="groupclassacceptabilities-put-output3"></span><h3>messages</h3>
+<div class="section" id="id30">
+<h4>Description:</h4>
+<p>Messages or errors generated by this module.</p>
+</div>
+<div class="section" id="id31">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-groupClassAcceptabilities-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

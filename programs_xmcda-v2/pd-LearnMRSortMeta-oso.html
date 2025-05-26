@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-LearnMRSortMeta-oso.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="learnmrsortmeta">
+<span id="learnmrsortmeta-oso"></span><h1>LearnMRSortMeta</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">oso</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>The purpose of this webservice is to infer parameters of an ELECTRE TRI Bouyssou-Marchant model, also called MR-Sort model. It takes in input the categories and criteria of the model and examples of assignments. The user should also specify several parameters of the metaheuristic: the size of the population of models (nmodels), the number of iterations to do with the heuristic adjusting the profiles, and the number of iterations (niter_heur) of the main loop (niter_meta). The metaheuristic will try to find a MRSort model which is compatible with the highest number of examples given in input.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Olivier Sobrie (<a class="reference external" href="mailto://olivier.sobrie%40gmail.com" rel="nofollow">olivier<span>.</span>sobrie<span>@</span>gmail<span>.</span>com</a>)</li>
+<li><strong>Reference:</strong> Olivier Sobrie, Vincent Mousseau, Marc Pirlot: Learning a Majority Rule Model from Large Sets of Assignment Examples</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">categories</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">perfs_table</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">assign</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">params</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">solver</span></a> <em>(optional)</em></li>
+</ul>
+<div class="section" id="criteria">
+<span id="learnmrsortmeta-oso-criteria"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>The list of criteria of the model.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="learnmrsortmeta-oso-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The list of learning alternatives to use to learn the MR-Sort model.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories">
+<span id="learnmrsortmeta-oso-categories"></span><h3>categories</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The list of categories of the model and their rank</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categories</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performancetable">
+<span id="learnmrsortmeta-oso-perfs-table"></span><h3>performanceTable</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The performance table of the learning alternatives.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesassignments">
+<span id="learnmrsortmeta-oso-assign"></span><h3>alternativesAssignments</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>The assignments of the alternatives in the different categories.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAffectations</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="params">
+<span id="learnmrsortmeta-oso-params"></span><h3>params</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>The parameters of the metaheuristic. &lsquo;nmodels&rsquo;: the size of the population; &lsquo;niter_heur&rsquo;: the number of iterations of the heuristic; &lsquo;niter_meta&rsquo;: the number of iterations of the main loop.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodParameters</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="solver">
+<span id="learnmrsortmeta-oso-solver"></span><h3>solver</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>The solver to use. Currently CPLEX and GLPK are supported. In none specified, GLPK is used.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodParameters</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="learnmrsortmeta-oso-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">compatible_alts</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">profiles_perfs</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">crit_weights</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">cat_profiles</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">lambda</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-LearnMRSortMeta-oso.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="compatiblealternatives">
+<span id="learnmrsortmeta-oso-compatible-alts-out"></span><h3>compatibleAlternatives</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>The reference alternatives that are compatible with the profiles, weights and majority threshold computed by the webservice.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="profilesperformances">
+<span id="learnmrsortmeta-oso-profiles-perfs-out"></span><h3>profilesPerformances</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>The profiles performance table of the profiles computed by the webservice.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteriaweights">
+<span id="learnmrsortmeta-oso-crit-weights-out"></span><h3>criteriaWeights</h3>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>The set of criteria weights found by the webservice.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categoriesprofiles">
+<span id="learnmrsortmeta-oso-cat-profiles-out"></span><h3>categoriesProfiles</h3>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>The category profiles computed by the webservice.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesProfiles</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="majoritythreshold">
+<span id="learnmrsortmeta-oso-lambda-out"></span><h3>majorityThreshold</h3>
+<div class="section" id="id22">
+<h4>Description:</h4>
+<p>The majority threshold computed by the webservice.</p>
+</div>
+<div class="section" id="id23">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodParameters</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="learnmrsortmeta-oso-message"></span><h3>messages</h3>
+<div class="section" id="id24">
+<h4>Description:</h4>
+<p>A list of messages generated by the webservice. In this output the result of the inference will be given. It gives informations on what might be wrong in the inputs.</p>
+</div>
+<div class="section" id="id25">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-LearnMRSortMeta-oso.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

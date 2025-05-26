@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="roruta-extremeranks">
+<span id="roruta-extremeranks-put"></span><h1>RORUTA-ExtremeRanks</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Finds the best and worst possible positions of alternatives in the final ranking taking into consideration all value functions that are compatible with the preference information.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Pawel Rychly (<a class="reference external" href="mailto://pawelrychly%40gmail.com" rel="nofollow">pawelrychly<span>@</span>gmail<span>.</span>com</a>).</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">performances</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">characteristic-points</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">criteria-preference-directions</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">preferences</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">intensities-of-preferences</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">rank-related-requirements</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">parameters</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="roruta-extremeranks-put-criteria"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of all considered criteria. The input value should be a valid XMCDA document whose main tag is criteria.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteria</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">criteria</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">criterion</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"%1"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"%1"</span><span class="o">&gt;&lt;/</span><span class="n">criterion</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteria</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="roruta-extremeranks-put-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The list of all considered alternatives. The input value should be a valid XMCDA document whose main tag is alternatives. Each alternative may be described using two attributes: id and name. While the first one denotes a machine readable name, the second represents a human readable name.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternatives</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternatives</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">alternative</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"%1"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"%2"</span> <span class="o">/&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternatives</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performances">
+<span id="roruta-extremeranks-put-performances"></span><h3>performances</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Description of evaluation of alternatives on different criteria. It is required to provide the IDs of both criteria and alternatives described previously. The input value should be provided as a valid XMCDA document whose main tag is performanceTable</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> performanceTable</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">performance</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">performance</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">alternativePerformances</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">performanceTable</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="characteristic-points">
+<span id="roruta-extremeranks-put-characteristic-points"></span><h3>characteristic points</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>A set of values associated with the criteria. This input allows to determine what type of value function should be used for the particular criterion. For each criterion that has an associated greater than one value, a piecewise linear value function is used. In this case, the mentioned value denotes a number of characteristic points of this value function. For the criteria that are not listed in this file, or for these for which the provided values are lower than two uses a general value function. The input value should be provided as a valid XMCDA document whose main tag is criteriaValues. Each element should contain both an id of the criterion, and value tag.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteriaValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteria-preference-directions">
+<span id="roruta-extremeranks-put-criteria-preference-directions"></span><h3>criteria preference directions</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>A set of values associated with criteria that determine their preference direction (0 - gain, 1 - cost).</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> criteriaValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">criteriaValues</span> <span class="n">mcdaConcept</span><span class="o">=</span><span class="s2">"preferenceDirection"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">criterionID</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">criterionID</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">criterionValue</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">criteriaValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="preferences">
+<span id="roruta-extremeranks-put-preferences"></span><h3>preferences</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Set of pairwise comparisons of reference alternatives. For a pair of alternatives three types of comparisons are supported. These are the strict preference, weak preference, and indifference. The input value should be provided as a valid XMCDA document whose main tag is alternativesComparisons. For each type of comparison, a separate alternativesComparisons tag should be used. Within these groups a mentioned types are denoted using a comparisonType tag by respectively strict, weak, and indif label. Comparisons should be provided as pairs of alternatives ids.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesComparisons</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;alternativesComparisons&gt;
+    &lt;comparisonType&gt;
+        %1&lt;!-- type of preference: strong, weak, or indif --&gt;
+    &lt;/comparisonType&gt;
+    &lt;pairs&gt;
+        &lt;pair&gt;
+            &lt;initial&gt;
+                &lt;alternativeID&gt;%2&lt;/alternativeID&gt;
+            &lt;/initial&gt;
+            &lt;terminal&gt;
+                &lt;alternativeID&gt;%3&lt;/alternativeID&gt;
+            &lt;/terminal&gt;
+        &lt;/pair&gt;
+        [...]
+    &lt;/pairs&gt;
+&lt;/alternativesComparisons&gt;
+[...]
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="intensities-of-preferences">
+<span id="roruta-extremeranks-put-intensities-of-preferences"></span><h3>intensities-of-preferences</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Set of comparisons of intensities of preference. For a pair of preference relations three types of comparisons are supported. These are the strict preference, weak, preference, and indifference. The input value should be provided as a valid XMCDA document whose main tag is alternativesComparisons. For each type of comparison, a separate alternativesComparisons tag should be used. Within these groups  aforementioned types are denoted using a comparisonType tag by respectively strict, weak, and indif label. Comparisons should be provided as pairs of two elementary sets of alternatives ids. The following form is expected:</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesComparisons</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">comparisonType</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">comparisonType</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">pairs</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">pair</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">initial</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativesSet</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">element</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                    <span class="o">&lt;/</span><span class="n">element</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">element</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                    <span class="o">&lt;/</span><span class="n">element</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">alternativesSet</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">initial</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">terminal</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">alternativesSet</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">element</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;%</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                    <span class="o">&lt;/</span><span class="n">element</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="n">element</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;%</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                    <span class="o">&lt;/</span><span class="n">element</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">alternativesSet</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">terminal</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">pair</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+    <span class="o">&lt;/</span><span class="n">pairs</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">alternativesComparisons</span><span class="o">&gt;</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="rank-related-requirements">
+<span id="roruta-extremeranks-put-rank-related-requirements"></span><h3>rank-related-requirements</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Set of rank-related requirements. In other words it is a set of  ranges of possible positions in the final ranking for a chosen alternatives. The input value should be provided as a valid XMCDA document whose main tag is alternativesValues. Each requirement should contain both an id of the reffered alternative and a pair of values that denote the desired range. These information should be provided within a separate alternativesValue tag.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">interval</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">lowerBound</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">lowerBound</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">upperBound</span><span class="o">&gt;&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;&lt;/</span><span class="n">upperBound</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">interval</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="roruta-extremeranks-put-parameters"></span><h3>parameters</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Single boolean value. Determines whether to use sctrictly increasing (true) or monotonously increasing (false) value functions</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul class="simple">
+<li><strong>Name:</strong> Use strictly increasing value functions?<ul>
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">"strict"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="roruta-extremeranks-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">best-ranking</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">worst-ranking</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="best-ranking">
+<span id="roruta-extremeranks-put-best-ranking"></span><h3>best ranking</h3>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>The best possible ranking positions that may be attained by the alternatives taking into consideration all value functions that are compatible with the preference information. The returned value is an XMCDA document whose main tag is alternativesValues.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+                            <span class="o">&lt;</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+                                    <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                                    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                                    <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                             <span class="o">&lt;/</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="worst-ranking">
+<span id="roruta-extremeranks-put-worst-ranking"></span><h3>worst ranking</h3>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>The worst possible ranking positions that may be attained by the alternatives taking into consideration all value functions that are compatible with the preference information. The returned value is an XMCDA document whose main tag is alternativesValues.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternativesValues</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+                            <span class="o">&lt;</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+                                    <span class="o">&lt;</span><span class="n">alternativeID</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">alternativeID</span><span class="o">&gt;</span>
+                                    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                            <span class="o">&lt;</span><span class="n">real</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">real</span><span class="o">&gt;</span>
+                                    <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                             <span class="o">&lt;/</span><span class="n">alternativeValue</span><span class="o">&gt;</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternativesValues</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="roruta-extremeranks-put-messages"></span><h3>messages</h3>
+<div class="section" id="id22">
+<h4>Description:</h4>
+<p>A list of messages generated by the algorithm.</p>
+</div>
+<div class="section" id="id23">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-RORUTA-ExtremeRanks-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

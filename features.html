@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/features.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="features">
+<span id="index-0"></span><h1>Features</h1>
+<div class="section" id="what-diviz-is">
+<h2>What diviz is</h2>
+<p>The goals of diviz are:</p>
+<ul class="simple">
+<li>to help <strong>researchers</strong> to construct algorithmic MCDA workflows ( = methods) from elementary MCDA components;</li>
+<li>to help <strong>teachers</strong> to present MCDA methods and let the students experiment their own creations;</li>
+<li>to help to easily <strong>compare</strong> results of different methods;</li>
+<li>to allow to easily <strong>add</strong> new elementary MCDA components;</li>
+<li>to avoid heavy calculations on your local computer by executing the methods on distant servers;</li>
+<li>to ease the <strong>dissemination</strong> of new MCDA algorithms, methods and experiments.</li>
+</ul>
+<p>The main properties of diviz are:</p>
+<ul class="simple">
+<li>all available MCDA components in diviz are (currently) (opensource) <strong>web services</strong> (<a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a>);</li>
+<li>the <strong>history</strong> of all the past executions is available (ideal for parameter tuning);</li>
+<li>use of <a class="reference external" href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a>  to make elementary components interoperable;</li>
+<li>use of <a class="reference external" href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a> and XSL (eXtensible Stylesheet Language) and CSS (Cascading Style Sheets) for a standardised visualisation of input and output data.</li>
+</ul>
+<p>It is open-source, released under the <a class="reference external" href="https://cecill.info/index.en.html" rel="nofollow">CeCILL license</a>; the source code is hosted on its <a class="reference external" href="https://gitlab.com/decision-deck/diviz" rel="nofollow">gitlab project&rsquo;s page</a></p>
+<p>Below you can find the main characteristics of diviz with a description of each of the features.</p>
+<div class="section" id="a-tool-for-mcda-components-workflow-design-execution-and-deployment">
+<h3>A tool for MCDA components workflow design, execution, and deployment</h3>
+<p>Based on basic algorithmic components, diviz allows to combine these elements in view of creating complex MCDA workflows or MCDA methods.</p>
+<p>Once the workflow is designed, it can be executed on various data sets written according to the <a class="reference external" href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a> standard.
+This execution is performed on distant servers via web services (each of the components is in fact proposed as a web service). See the list of <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a> for further details.</p>
+<p>Once the execution is completed, the outputs of the different elementary components are available and can be visualised in diviz.
+The user can then modify the input files in order to rerun the workflow, or change the existing workflow to adapt it to his needs.
+The history of past executions is available at any moment, which helps to compare the input and output data and tune the parameters or the workflow.</p>
+<p>Finally, the constructed workflow can be deployed as a new web service which is then automatically made available to all the users which are employing diviz (in development).</p>
+</div>
+<div class="section" id="a-simple-and-standardised-mcda-data-visualisation-tool">
+<h3>A simple and standardised MCDA data visualisation tool</h3>
+<p>The data exchanged between the elementary algorithmic components is conform to the <a class="reference external" href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a> standard.
+<a class="reference external" href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a> allows to express MCDA concepts through a few general XML structures.</p>
+<p>By using the power of XSL (eXtensible Stylesheet Language) combined with a standard CSS (Cascading Style Sheets), we can easily visualise any data elements which are sent to components or produced by them.
+This visualisation is done in a particular pane of the diviz window and is easily accessible for all past executions.</p>
+</div>
+<div class="section" id="platform-independent">
+<h3>Platform independent</h3>
+<p>The diviz client software is written in Java and is therefore independent of the operating system you are using.</p>
+</div>
+<div class="section" id="open-source">
+<h3>Open source</h3>
+<p>diviz is distributed as an open source software. The various elementary MCDA components (which are the <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a>) are also available as open source software bricks.</p>
+</div>
+</div>
+<div class="section" id="what-diviz-is-not">
+<h2>What diviz is not</h2>
+<div class="section" id="a-decision-aid-process-designer-and-manager-and-a-role-manager">
+<h3>A decision aid process designer and manager, and a role manager</h3>
+<p>As mentionned above, diviz is a workflow manager for algorithmic components.</p>
+<p>As such it should not be mixed up with a decision aid process workflow manager.
+Such a tool would model the different important steps, as well as the various roles might be involved in such decision aid process.
+The development of such a decision aid process manager is one of the objectives of the <a class="reference external" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a> project.</p>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/features.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

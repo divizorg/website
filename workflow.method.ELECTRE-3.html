@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/workflow.method.ELECTRE-3.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="electre-3">
+<span id="index-0"></span><h1>ELECTRE 3</h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="short-description">
+<h2>Short description</h2>
+<p>This workflow demonstrates the construction of an outranking relation according to the ELECTRE <a class="reference internal" href="/workflow.x4.method.ELECTRE-TRI.html" id="id1">[Roy1996]</a> methods approaches and the exploitation via a similar algorithm than ELECTRE 3.</p>
+</div>
+<div class="section" id="detailed-description">
+<h2>Detailed description</h2>
+<p>This workflow uses, among other components, the <a class="reference internal" href="/programs_xmcda-v4/pd-ElectreConcordance-J-MCDA.html"><span class="std std-ref">ELECTRE Concordance</span></a>, <a class="reference internal" href="/programs_xmcda-v4/pd-ElectreDiscordances-J-MCDA.html"><span class="std std-ref">ELECTRE Discordances</span></a> and <a class="reference internal" href="/programs_xmcda-v4/pd-ElectreOutranking-J-MCDA.html"><span class="std std-ref">ELECTRE Outranking</span></a> components to calculate the outranking relation according to the ELECTRE methods approaches. It then uses the <a class="reference internal" href="/programs_xmcda-v4/pd-alternativesRankingViaQualificationDistillation-ITTB.html"><span class="std std-ref">alternativesRankingViaQualificationDistillation</span></a> component to determine a ranking of the alternatives, based on an algorithm similar to the ELECTRE 3 exploitation procedure. From a 0-1 valued outranking graph (obtained after a cut), the strength (resp. the weakness) of each alternative is calculated by counting the number of alternatives that they beat (resp. by which they are beaten). The qualification is the difference between the strength and the weakness. For the downwards (resp. upwards) distillation, the best (resp. worst) alternatives are then removed, i.e. those with the highest (resp. lowest) qualification, and put in the first (resp. last) position of the final ranking. The procedure is repeated with the remaining alternatives, until no alternative is left.</p>
+</div>
+<div class="section" id="screenshot">
+<h2>Screenshot</h2>
+<div class="figure">
+<a class="reference internal image-reference" href="/_images/method.ELECTRE-3.png"><img alt="_images/method.ELECTRE-3.png" src="/_images/method.ELECTRE-3.png" style="width: 100%;"></a>
+</div>
+</div>
+<div class="section" id="download-link">
+<h2>Download link</h2>
+<p><a class="reference download internal" download="" href="/_downloads/5abb81a3d2df5d157356c10b8790d0c5/method.ELECTRE-3.dvz"><code class="xref download docutils literal notranslate"><span class="pre">method.ELECTRE-3.dvz</span></code></a></p>
+<p>Click <a class="reference internal" href="/tutorial.import.html"><span class="std std-ref">here</span></a> for a detailed description on how to import the workflow into diviz.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography</h2>
+<table class="docutils citation" frame="void" id="roy1996" rules="none">
+<colgroup><col class="label"><col></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="/workflow.method.ELECTRE-3.html">[Roy1996]</a></td><td>Roy B., Multicriteria Methodology for Decision Analysis, Kluwer Academic Publishers, 1996</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/workflow.method.ELECTRE-3.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

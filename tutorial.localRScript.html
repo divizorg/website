@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/tutorial.localRScript.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="call-a-local-r-script-in-diviz-the-example-of-the-weighted-sum">
+<span id="tutorial-rscript"></span><span id="index-0"></span><h1>Call a local R script in diviz: the example of the weighted sum</h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="short-description-of-the-tutorial">
+<h2>Short description of the tutorial</h2>
+<p>In this tutorial we show how to call a local R script in diviz implementing a weighted sum.</p>
+</div>
+<div class="section" id="detailed-description-of-the-tutorial">
+<h2>Detailed description of the tutorial</h2>
+<p>This tutorial focusses on the following aspects:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Writing the weighted sum script in R;</li>
+<li>Adding this program to diviz.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="tutorial">
+<h2>Tutorial</h2>
+<p>This tutorial requires that you have installed <a class="reference external" href="https://www.r-project.org/" rel="nofollow">R</a> on your computer (<a class="reference external" href="https://www.r-project.org/" rel="nofollow">https://www.r-project.org/</a>) and that you have installed the RXMCDA package (XMCDA parsing library for R, available via the <a class="reference external" href="https://cran.r-project.org/web/packages/RXMCDA/index.html" rel="nofollow">CRAN</a>). To install the RXMCDA package, just do it in R via the command:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="s2">"RXMCDA"</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Create a new empty workflow (see this <a class="reference internal" href="/tutorial.diviz.html"><span class="std std-ref">tutorial</span></a> to learn how to do this) and drag and drop <strong>generic_program</strong> in the workspace. You should now have a program called <strong>generic_program-1</strong> in your workspace with one input (<code class="docutils literal notranslate"><span class="pre">infile1</span></code>) and one output (<code class="docutils literal notranslate"><span class="pre">outfile1</span></code>).</p>
+<p>If you double-click on <strong>generic_program-1</strong>, its properties window will open. There you can specify the number of inputs and outputs you need for your program. In this tutorial, we wish to implement a weighted sum program. We will therefore need 4 inputs: two inputs to define the alternatives and the criteria, an input for the performance table, and one for the weights of the criteria. Concerning the outputs, we will only produce one output, which contains the overall values of the input alternatives. We therefore select 4 inputs and 1 output.</p>
+<p>To specify the commandline call for this program, enter the following in the <strong>cmdline</strong> field of the properties window of <strong>generic_program-1</strong>:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">--</span><span class="n">slave</span> <span class="o">--</span><span class="n">vanilla</span> <span class="o">--</span><span class="n">args</span> <span class="n">infile1</span> <span class="n">infile2</span> <span class="n">infile3</span> <span class="n">infile4</span> <span class="n">outfile1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The arguments (&ldquo;infile1&rdquo;, &hellip;, &ldquo;outfile1&rdquo;) define the input and output file names.</p>
+<p>Then check the <strong>Use a script</strong> option and enter the following in the textbox :</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the RXMCDA package (which in turn</span>
+<span class="c1"># will load the required XML package)</span>
+
+<span class="n">library</span><span class="p">(</span><span class="n">RXMCDA</span><span class="p">)</span>
+
+<span class="c1"># Get the list of arguments behind the --args option</span>
+
+<span class="n">args</span> <span class="o">&lt;-</span> <span class="n">commandArgs</span><span class="p">(</span><span class="n">trailingOnly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+
+<span class="c1"># Get the filenames from the arguments</span>
+
+<span class="n">alternativesFile</span> <span class="o">&lt;-</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">criteriaFile</span> <span class="o">&lt;-</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">performanceTableFile</span> <span class="o">&lt;-</span> <span class="n">args</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">criteriaWeightsFile</span> <span class="o">&lt;-</span> <span class="n">args</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">overallValuesFile</span> <span class="o">&lt;-</span> <span class="n">args</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Load the input files</span>
+<span class="c1"># See the documentation of the XML package for R</span>
+<span class="c1"># for further details on the xmlParse function</span>
+
+<span class="n">treeAlternatives</span><span class="o">&lt;-</span><span class="n">xmlTreeParse</span><span class="p">(</span><span class="n">alternativesFile</span><span class="p">,</span><span class="n">useInternalNodes</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">treeCriteria</span><span class="o">&lt;-</span><span class="n">xmlTreeParse</span><span class="p">(</span><span class="n">criteriaFile</span><span class="p">,</span><span class="n">useInternalNodes</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">treePerformanceTable</span><span class="o">&lt;-</span><span class="n">xmlTreeParse</span><span class="p">(</span><span class="n">performanceTableFile</span><span class="p">,</span><span class="n">useInternalNodes</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">treeCriteriaWeights</span><span class="o">&lt;-</span><span class="n">xmlTreeParse</span><span class="p">(</span><span class="n">criteriaWeightsFile</span><span class="p">,</span><span class="n">useInternalNodes</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+
+<span class="c1"># Read the MCDA data from the files</span>
+<span class="c1"># See the documentation of the RXMCDA package for R for further</span>
+<span class="c1"># details concerning this step, and for the description</span>
+<span class="c1"># of the output data</span>
+
+<span class="n">critIDs</span> <span class="o">&lt;-</span> <span class="n">getCriteriaIDs</span><span class="p">(</span><span class="n">treeCriteria</span><span class="p">)[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">altIDs</span> <span class="o">&lt;-</span> <span class="n">getAlternativesIDs</span><span class="p">(</span><span class="n">treeAlternatives</span><span class="p">)[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">perfTable</span> <span class="o">&lt;-</span> <span class="n">getPerformanceTables</span><span class="p">(</span><span class="n">treePerformanceTable</span><span class="p">,</span><span class="n">altIDs</span> <span class="o">=</span> <span class="n">altIDs</span><span class="p">,</span> <span class="n">critIDs</span> <span class="o">=</span> <span class="n">critIDs</span><span class="p">)[[</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">critWeights</span> <span class="o">&lt;-</span> <span class="n">getCriteriaValues</span><span class="p">(</span><span class="n">treeCriteriaWeights</span><span class="p">,</span> <span class="n">critIDs</span><span class="p">)[[</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="c1"># Calculate the weighted sum of the alternatives</span>
+
+<span class="n">overallValues</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">()</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="ow">in</span> <span class="mi">1</span><span class="p">:</span><span class="n">dim</span><span class="p">(</span><span class="n">perfTable</span><span class="p">)[</span><span class="mi">1</span><span class="p">]){</span>
+     <span class="n">overallValues</span> <span class="o">&lt;-</span> <span class="n">rbind</span><span class="p">(</span><span class="n">overallValues</span><span class="p">,</span> <span class="n">c</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="nb">sum</span><span class="p">(</span><span class="n">perfTable</span><span class="p">[</span><span class="n">i</span><span class="p">,]</span><span class="o">*</span><span class="n">t</span><span class="p">(</span><span class="n">critWeights</span><span class="p">[,</span><span class="mi">2</span><span class="p">]))))</span>
+<span class="p">}</span>
+
+<span class="c1"># Write the result file</span>
+<span class="c1"># We first create an empty XML tree</span>
+
+<span class="n">outTree</span> <span class="o">=</span> <span class="n">newXMLDoc</span><span class="p">()</span>
+
+<span class="c1"># Then we specify the root node</span>
+
+<span class="n">newXMLNode</span><span class="p">(</span><span class="s2">"xmcda:XMCDA"</span><span class="p">,</span>
+     <span class="n">attrs</span><span class="o">=</span><span class="n">c</span><span class="p">(</span><span class="s2">"xsi:schemaLocation"</span> <span class="o">=</span> <span class="s2">"http://www.decision-deck.org/2009/XMCDA-2.1.0 https://www.decision-deck.org/xmcda/_downloads/XMCDA-2.1.0.xsd"</span><span class="p">),</span>
+     <span class="n">suppressNamespaceWarning</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span>
+     <span class="n">namespace</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"xsi"</span> <span class="o">=</span> <span class="s2">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="p">,</span> <span class="s2">"xmcda"</span> <span class="o">=</span> <span class="s2">"http://www.decision-deck.org/2009/XMCDA-2.1.0"</span><span class="p">),</span>
+     <span class="n">parent</span><span class="o">=</span><span class="n">outTree</span><span class="p">)</span>
+
+<span class="c1"># And finally we write the output data in the XML tree</span>
+<span class="c1"># Again, see the RXMCDA documentation for</span>
+<span class="c1"># further details on the putAlternativesValues function and its arguments</span>
+
+<span class="n">putAlternativesValues</span><span class="p">(</span><span class="n">outTree</span><span class="p">,</span> <span class="n">overallValues</span><span class="p">,</span> <span class="n">rownames</span><span class="p">(</span><span class="n">perfTable</span><span class="p">),</span> <span class="s2">"overallValues"</span><span class="p">)</span>
+
+<span class="n">saveXML</span><span class="p">(</span><span class="n">outTree</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">overallValuesFile</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Instead of pasting everything in the script field of the properties window, you could have created a new file (let&rsquo;s say &ldquo;weightedSum.R&rdquo;) and changed the command line to :</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">--</span><span class="n">slave</span> <span class="o">--</span><span class="n">vanilla</span> <span class="o">--</span><span class="n">file</span><span class="o">=/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">weightedSum</span><span class="o">.</span><span class="n">R</span> <span class="o">--</span><span class="n">args</span> <span class="n">infile1</span> <span class="n">infile2</span> <span class="n">infile3</span> <span class="n">infile4</span> <span class="n">outfile1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Another option is to add the file of the script (let&rsquo;s say &ldquo;weightedSum.R&rdquo;) to your workspace, and connect it to <strong>generic_program-1</strong>. To do so, you need to check the option &lsquo;Provide the script as a file&rsquo;, which adds an input called <code class="docutils literal notranslate"><span class="pre">script</span></code> to the <strong>generic_program-1</strong> box. You just have to connect the file representing your script to this entry. The command-line now becomes:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">--</span><span class="n">slave</span> <span class="o">--</span><span class="n">vanilla</span> <span class="o">--</span><span class="n">file</span><span class="o">=</span><span class="n">script</span> <span class="o">--</span><span class="n">args</span> <span class="n">infile1</span> <span class="n">infile2</span> <span class="n">infile3</span> <span class="n">infile4</span> <span class="n">outfile1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>To check that your program works as expected, connect the following 4 input files to the correct input elements of <strong>generic_program-1</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference download internal" download="" href="/_downloads/de58e03fd2a04099000a3f688b0fab2e/alternatives.xml"><code class="xref download docutils literal notranslate"><span class="pre">alternatives.xml</span></code></a> to <code class="docutils literal notranslate"><span class="pre">infile1</span></code></li>
+<li><a class="reference download internal" download="" href="/_downloads/32614a3368df07f0b00b51546b7d6311/criteria.xml"><code class="xref download docutils literal notranslate"><span class="pre">criteria.xml</span></code></a> to <code class="docutils literal notranslate"><span class="pre">infile2</span></code></li>
+<li><a class="reference download internal" download="" href="/_downloads/a89c85bccab7b02ac848ee560c7b2c27/performanceTable.xml"><code class="xref download docutils literal notranslate"><span class="pre">performanceTable.xml</span></code></a> to <code class="docutils literal notranslate"><span class="pre">infile3</span></code></li>
+<li><a class="reference download internal" download="" href="/_downloads/46fd816e52641157c173f420ed11dc37/criteriaWeights.xml"><code class="xref download docutils literal notranslate"><span class="pre">criteriaWeights.xml</span></code></a> to <code class="docutils literal notranslate"><span class="pre">infile4</span></code></li>
+</ul>
+</div></blockquote>
+<p>Then, execute the workflow and click on <code class="docutils literal notranslate"><span class="pre">outfile1</span></code> to display the overall values of the input alternatives.</p>
+</div>
+<div class="section" id="remarks">
+<h2>Remarks</h2>
+<p>This example shows the basic usage of local R scripts in R. Note that we warmly recommend to do further tests in your scripts in order to increase its robustness. For example, you should encapsulate parts of the script in <code class="docutils literal notranslate"><span class="pre">tryCatch</span></code> blocks to handle exceptions. Such errors could then be written to a second output file which would help the user to solve the execution problems. Furthermore, you should check the validity of the input files with respect to the XMCDA Schema. You could do that by using the <code class="docutils literal notranslate"><span class="pre">checkXSD</span></code> function of the R package RXMCDA.</p>
+<p>You can download the workflow bundled with the input files described in this tutorial from <a class="reference download internal" download="" href="/_downloads/a7e85797600efac820b244be87b1bccd/tutorialRScript.dvz"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>. See <a class="reference internal" href="/tutorial.import.html"><span class="std std-ref">here</span></a> for a tutorial on how to import such a workflow into diviz.</p>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/tutorial.localRScript.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

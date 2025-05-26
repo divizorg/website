@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="plotalternativesvalues">
+<span id="plotalternativesvalues-ittb"></span><h1>plotAlternativesValues</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">ITTB</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">2.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>This web service generates a barplot or a pie plot representing a numeric quantity for each alternative, like, e.g., an importance value. Compared to the web service plotAlternativesValues, some parameters are added. Colors can be used and the title of the plot can be typed. In the case of a bar chart, the axis-labels can also be typed. The alternatives&rsquo; evaluations are supposed to be real or integer numeric values.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Dhouha Kbaier (<a class="reference external" href="mailto://dhouha.kbaier%40telecom-bretagne.eu" rel="nofollow">dhouha<span>.</span>kbaier<span>@</span>telecom-bretagne<span>.</span>eu</a>)</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html"><span class="std std-ref">alternativesValues</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html"><span class="std std-ref">parameters</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="plotalternativesvalues-ittb-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>A list of alternatives. Alternatives can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), alternatives are considered as active.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> alternatives</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">alternatives</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">alternative</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">active</span><span class="o">&gt;</span><span class="p">[</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">active</span><span class="o">&gt;</span>
+                <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+        <span class="o">&lt;/</span><span class="n">alternative</span><span class="o">&gt;</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="o">&lt;/</span><span class="n">alternatives</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesvalues">
+<span id="plotalternativesvalues-ittb-alternativesvalues"></span><h3>alternativesValues</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>A list of &lt;alternativesValue&gt; representing a certain numeric quantity for each alternative, like, e.g., an overall value.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="plotalternativesvalues-ittb-parameters"></span><h3>parameters</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>Plot type method: choose between &ldquo;Bar chart&rdquo; and &ldquo;Pie chart&rdquo;. The default plot is a bar chart.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> Chart type:</p>
+<p><em>Type of the plot: choose between &ldquo;Bar chart&rdquo; and &ldquo;Pie chart&rdquo;. The default plot is a bar chart.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>bar chart (XMCDA label : barChart) (default)</li>
+<li>pie chart (XMCDA label : pieChart)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Order by:</p>
+<p><em>Choose between &ldquo;name&rdquo;, &ldquo;id&rdquo; or &ldquo;values&rdquo;.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>name (XMCDA label : name)</li>
+<li>id (XMCDA label : id)</li>
+<li>values (XMCDA label : values) (default)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Order:</p>
+<p><em>The parameter which says if the highest or lowest value is to be placed first.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>increasing (XMCDA label : increasing) (default)</li>
+<li>decreasing (XMCDA label : decreasing)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Colors:</p>
+<p><em>The use of colors: true for a colored plot.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>gradient (XMCDA label : true)</li>
+<li>black and white (XMCDA label : false) (default)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Initial color:</p>
+<p><em>String that indicates the initial color in the generated barplot or pieplot.Choose between &ldquo;Black&rdquo;, &ldquo;Red&rdquo;, &ldquo;Blue&rdquo;, &ldquo;Green&rdquo;, &ldquo;Yellow&rdquo;, &ldquo;Magenta&rdquo; and &ldquo;Cyan&rdquo;.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>black (XMCDA label : black) (default)</li>
+<li>red (XMCDA label : red)</li>
+<li>blue (XMCDA label : blue)</li>
+<li>green (XMCDA label : green)</li>
+<li>yellow (XMCDA label : yellow)</li>
+<li>magenta (XMCDA label : magenta)</li>
+<li>cyan (XMCDA label : cyan)</li>
+<li>white (XMCDA label : white)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Final color:</p>
+<p><em>String that indicates the final color in the generated barplot or pieplot. choose between &ldquo;Black&rdquo;,&rdquo;White&rdquo;, &ldquo;Red&rdquo;, &ldquo;Blue&rdquo;, &ldquo;Green&rdquo;, &ldquo;Yellow&rdquo;, &ldquo;Magenta&rdquo; and &ldquo;Cyan&rdquo;.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>black (XMCDA label : black) (default)</li>
+<li>red (XMCDA label : red)</li>
+<li>blue (XMCDA label : blue)</li>
+<li>green (XMCDA label : green)</li>
+<li>yellow (XMCDA label : yellow)</li>
+<li>magenta (XMCDA label : magenta)</li>
+<li>cyan (XMCDA label : cyan)</li>
+<li>white (XMCDA label : white)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Chart title:</p>
+<p><em>String for the title of the plot. The default value is an empty field.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> X axis label:</p>
+<p><em>String for the horizontal axis-label.The default value is an empty field.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Y axis label:</p>
+<p><em>String for the vertical axis-label.The default value is an empty field.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;&rdquo;</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> programParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">programParameters</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"chart_type"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Chart type"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"order_by"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Order by"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"order"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Order"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"use_color"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Colors in the chart"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"initial_color"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Initial color"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"final_color"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Final color"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"chart_title"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Chart title"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">7</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"domain_axis"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Domain axis label"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span> <span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"range_axis"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"Range axis label"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">9</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                         <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+                 <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">programParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="plotalternativesvalues-ittb-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html"><span class="std std-ref">alternativesValues.png</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="graph-png">
+<span id="plotalternativesvalues-ittb-png"></span><h3>graph (png)</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The generated barplot or pieplot as a PNG image.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> other</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="plotalternativesvalues-ittb-messages"></span><h3>messages</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>A list of messages generated by the algorithm.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-plotAlternativesValues-ITTB.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

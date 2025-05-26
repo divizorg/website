@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-Outranking-ScoreBin_scores-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="outranking-scorebin-scores">
+<span id="outranking-scorebin-scores-put"></span><h1>Outranking-ScoreBin_scores</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Module for calculation ScoreBin scores. The preferences can be given as a complete pairwise comparison matrix where the value determines the degree of preference 0.0 or 1.0. The second type of preference input is to specify pairs of alternatives for which there is a preference.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Krzysztof Martyn &lt;<a class="reference external" href="mailto://krzysztof.martyn%40wp.pl" rel="nofollow">krzysztof<span>.</span>martyn<span>@</span>wp<span>.</span>pl</a>&gt;</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://bitbucket.org/Krzysztof_Martyn/prefrank" rel="nofollow">https://bitbucket.org/Krzysztof_Martyn/prefrank</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">preferences</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">parameters</span></a></li>
+</ul>
+<div class="section" id="alternatives">
+<span id="outranking-scorebin-scores-put-input1"></span><h3>alternatives</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Alternatives to consider.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="preferences">
+<span id="outranking-scorebin-scores-put-input2"></span><h3>preferences</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Aggregated preferences binary matrix or pairs for which the outrank relationship occurs.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesComparisons</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="outranking-scorebin-scores-put-input3"></span><h3>parameters</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>First parameter specifies if preference are given by matrix or pairs. Second parameter specifies the algorithm to calculate ranking. There are three algorithms to choose from: PageRank, HITS and Salsa.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> input type</p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Preferences given by whole matrix 1-0 valued. (XMCDA label : matrix) (default)</li>
+<li>Preferences given by pairs for whom the outranking relationship occurs (crisp). (XMCDA label : pair)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> algorithm type</p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>ScoreBin I (XMCDA label : scorebin_1) (default)</li>
+<li>ScoreBin II (XMCDA label : scorebin_2)</li>
+<li>ScoreBin III (XMCDA label : scorebin_3)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> number of iteration</p>
+<p><em>Number of iteration</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> The value should be greater than 1</li>
+<li><strong>Type:</strong> integer</li>
+<li><strong>Default value:</strong> 1000</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Run averaging if not converge?</p>
+<p><em>Turning on the version with averaging the score value, if after &ldquo;number of iteration&rdquo; iteration the score does not converge, that is: the maximum score difference between the last two iterations is greater than 0.001.</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> false</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Earlier stop if converge?</p>
+<p><em>Earlier stop if the maximum difference in score between two consecutive iterations is less than 0.00001</em></p>
+<ul class="simple">
+<li><strong>Default value:</strong> true</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"input_type"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"input_type"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"algorithm_type"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"algorithm_type"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"number_of_iteration"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"number_of_iteration"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">integer</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">integer</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"check_convergence"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"check_convergence"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"early_stopping"</span> <span class="n">name</span><span class="o">=</span><span class="s2">"early_stopping"</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="outranking-scorebin-scores-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">positive_flows</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">negative_flows</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">total_flows</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">ranking</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-Outranking-ScoreBin_scores-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="positive-flows">
+<span id="outranking-scorebin-scores-put-output1"></span><h3>positive flows</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>Positive outranking flows.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="negative-flows">
+<span id="outranking-scorebin-scores-put-output2"></span><h3>negative flows</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Negative outranking flows.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="total-flows">
+<span id="outranking-scorebin-scores-put-output3"></span><h3>total flows</h3>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>Final flows computed from the given data.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="ranking">
+<span id="outranking-scorebin-scores-put-output4"></span><h3>ranking</h3>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>ScoreBin scores computed from the given data.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesComparisons</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="outranking-scorebin-scores-put-output5"></span><h3>messages</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>Messages or errors generated by this module.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-Outranking-ScoreBin_scores-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

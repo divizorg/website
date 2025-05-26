@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="csvtoxmcda-criteriavalues">
+<span id="csvtoxmcda-criteriavalues-pyxmcda"></span><h1>csvToXMCDA-criteriaValues</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PyXMCDA</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">2.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Transforms a file containing criteria values from a comma-separated values (CSV) file to two XMCDA compliant files, containing the corresponding criteria ids and their criteriaValues.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> S&eacute;bastien Bigaret (<a class="reference external" href="mailto://sebastien.bigaret%40telecom-bretagne.eu" rel="nofollow">sebastien<span>.</span>bigaret<span>@</span>telecom-bretagne<span>.</span>eu</a>)</li>
+<li><strong>Web page:</strong> <a class="reference external" href="https://gitlab.com/sbigaret/ws-pyxmcda" rel="nofollow">https://gitlab.com/sbigaret/ws-pyxmcda</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html"><span class="std std-ref">criteriaValues.csv</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html"><span class="std std-ref">parameters</span></a></li>
+</ul>
+<div class="section" id="criteria-values-csv">
+<span id="csvtoxmcda-criteriavalues-pyxmcda-csv"></span><h3>criteria values (csv)</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>The criteria and their criteria values as a CSV file.  The first line is made of two cells, the first one being empty, and the second one will be the content of the attribute &ldquo;mcdaConcept&rdquo; in the tag &ldquo;&lt;criteriaValues&gt;&rdquo;, if supplied.  The following lines are made of at least two cells, with the first cell being an criterion&rsquo; id (and name, see below), and the remaining cells their associated values.</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">,</span><span class="n">weights</span>
+<span class="n">c1</span> <span class="p">(</span><span class="n">color</span><span class="p">),</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">c2</span> <span class="p">(</span><span class="n">price</span><span class="p">),</span><span class="mf">3.14159</span>
+</pre></div>
+</div>
+<p>The first column contains the criteria&rsquo; ids. Additionally, the criteria&rsquo; names are also extracted when the cells are formatted like <cite>id (name)</cite>.  Set the parameter &ldquo;First column&rdquo; to &ldquo;id&rdquo; to deactivate the extraction of criteria&rsquo; names.</p>
+<p>By default the values are considered as float numbers.  This can be changed using the parameter &ldquo;Default content&rdquo;.  It is possible to specify the type of a value by prepending it with a prefix:</p>
+<ul class="simple">
+<li><cite>float:</cite> for floats (ex.: <cite>1</cite>, <cite>1.2</cite>, <cite>1.2e3</cite>)</li>
+<li><cite>integer:</cite> for integers (decimal representation: <cite>127</cite>, hexadecimal: <cite>0x7f</cite>, octal: <cite>0o177</cite>, binary: <cite>0b1111111</cite>)</li>
+<li><cite>string:</cite> for strings (note that a string with a colon should always be prefixed by <cite>string:</cite>, no matter what the default prefix is).</li>
+<li><cite>boolean:</cite> for booleans: 1 or &lsquo;true&rsquo; (case insensitive) are True values, everything else is false.</li>
+<li><cite>na:</cite> for N/A (everything after the colon is ignored)</li>
+</ul>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">,</span><span class="n">weights</span>
+<span class="n">c1</span><span class="p">,</span><span class="nb">float</span><span class="p">:</span><span class="mf">1.0</span>
+<span class="n">c2</span><span class="p">,</span><span class="n">integer</span><span class="p">:</span><span class="mi">2</span>
+<span class="n">c3</span><span class="p">,</span><span class="mf">3.03</span>
+<span class="n">c4</span><span class="p">,</span><span class="n">string</span><span class="p">:</span><span class="n">a</span> <span class="n">label</span>
+<span class="n">c4b</span><span class="p">,</span><span class="n">string</span><span class="p">:</span><span class="n">another</span> <span class="n">label</span>
+<span class="n">c5</span><span class="p">,</span><span class="n">na</span><span class="p">:</span><span class="n">content</span> <span class="n">ignored</span> <span class="k">for</span> <span class="n">N</span><span class="o">/</span><span class="n">A</span>
+<span class="n">c6</span><span class="p">,</span><span class="n">boolean</span><span class="p">:</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>The criteria and their criteria values as a CSV file.</p>
+<p>Example (here, &lsquo;cost&rsquo;, &lsquo;risk&rsquo; etc. are criteria ids):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">,</span><span class="n">cost</span><span class="p">,</span><span class="n">risk</span><span class="p">,</span><span class="n">employment</span><span class="p">,</span><span class="n">connection</span>
+<span class="n">weights</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span>
+</pre></div>
+</div>
+<p>or, when both criteria&rsquo; ids and names are given (in the form: &ldquo;id (name)&rdquo;):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">,</span><span class="n">c01</span> <span class="p">(</span><span class="n">Cost</span><span class="p">),</span> <span class="n">c02</span> <span class="p">(</span><span class="n">risk</span><span class="p">),</span> <span class="n">c03</span> <span class="p">(</span><span class="n">employment</span><span class="p">),</span> <span class="n">c04</span> <span class="p">(</span><span class="n">connection</span><span class="p">)</span>
+<span class="n">weights</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> other</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="parameters">
+<span id="csvtoxmcda-criteriavalues-pyxmcda-parameters"></span><h3>parameters</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Parameters of the method</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul>
+<li><p class="first">Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</p>
+</li>
+<li><p class="first"><strong>Name:</strong> CSV delimiter</p>
+<p><em>Indicates the delimiter to use. Leave blank for auto-detection.  It is especially handful when the auto-detection fails to determine the csv delimiter.</em></p>
+<ul class="simple">
+<li><strong>Constraint description:</strong> One character maximum</li>
+<li><strong>Type:</strong> string</li>
+<li><strong>Default value:</strong> &ldquo;&rdquo;</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> Default content</p>
+<p><em>.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>float (XMCDA label : float) (default)</li>
+<li>string (XMCDA label : label)</li>
+<li>integer (XMCDA label : integer)</li>
+<li>boolean (XMCDA label : boolean)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Name:</strong> First column</p>
+<p><em>Content of the first column.</em></p>
+<ul class="simple">
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>id (XMCDA label : false)</li>
+<li>id (name) (XMCDA label : true) (default)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> programParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">programParameters</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"csv_delimiter"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"default_prefix"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">parameter</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"name_in_id"</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">values</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="n">boolean</span><span class="o">&gt;%</span><span class="mi">3</span><span class="o">&lt;/</span><span class="n">boolean</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">values</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">programParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="csvtoxmcda-criteriavalues-pyxmcda-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html"><span class="std std-ref">criteriaValues</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="csvtoxmcda-criteriavalues-pyxmcda-criteria"></span><h3>criteria</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The equivalent criteria ids.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteria-values">
+<span id="csvtoxmcda-criteriavalues-pyxmcda-criteriavalues"></span><h3>criteria values</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The equivalent criteria values.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="csvtoxmcda-criteriavalues-pyxmcda-messages"></span><h3>messages</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Status messages.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-csvToXMCDA-criteriaValues-PyXMCDA.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

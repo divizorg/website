@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v2/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v2/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v2/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v2/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v2/pd-PROMETHEE_preference-PUT.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="prometheepreference">
+<span id="promethee-preference-put"></span><h1>PrometheePreference</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">PUT</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>Computes aggregated preference indices
+The key feature of this module is its flexibility in terms of the types of
+elements allowed to compare, i.e. alternatives vs alternatives, alternatives vs
+boundary profiles and alternatives vs central (characteristic) profiles.
+Each criterion can have its own preference function (one of six predefined functions).</p>
+<ul class="simple">
+<li><strong>Web page:</strong> <a class="reference external" href="https://github.com/Yamadads/PrometheeDiviz" rel="nofollow">https://github.com/Yamadads/PrometheeDiviz</a></li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">performance_table</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">profiles_performance_table</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">weights</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">generalised_criteria</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">categories_profiles</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">method_parameters</span></a></li>
+</ul>
+<div class="section" id="criteria">
+<span id="promethee-preference-put-input3"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>Criteria to consider, possibly with preference and indifference thresholds. For Gaussian function it needs inflection point (sigma). Each criterion must have a preference direction specified (min or max). It is worth mentioning that this module allows to define thresholds as constants as well as linear functions.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="promethee-preference-put-input1"></span><h3>alternatives</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>Alternatives to consider.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performance-table">
+<span id="promethee-preference-put-input4"></span><h3>performance table</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The performance of alternatives.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="profiles-performance-table">
+<span id="promethee-preference-put-input5"></span><h3>profiles performance table</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The performance of profiles (boundary or central).</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="weights">
+<span id="promethee-preference-put-input6"></span><h3>weights</h3>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>Weights of criteria to consider.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="generalised-criteria">
+<span id="promethee-preference-put-input7"></span><h3>generalised criteria</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>ID number of predefined preference function specified for each criterion.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories-profiles">
+<span id="promethee-preference-put-input2"></span><h3>categories profiles</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>Definitions of central or boundary profiles connected with classes (categories)</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesProfiles</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="method-parameters">
+<span id="promethee-preference-put-input8"></span><h3>method parameters</h3>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>First parameter specifies the type of elements provided for comparison.</p>
+<p>Choosing &lsquo;boundary_profiles&rsquo; or &lsquo;central_profiles&rsquo; requires providing inputs &lsquo;classes_profiles&rsquo; and &lsquo;profiles_performance_table&rsquo; as well (which are optional by default).</p>
+<p>Second parameter specifies the type of function used for comparison of each criterion.
+Choosing &lsquo;specified&rsquo; requires providing inputs &ldquo;generalised_criterion&rdquo; which is optional by default.
+Choosing some of numbers sets same function for all criteria.</p>
+</div>
+<div class="section" id="gui-information">
+<h4>GUI information:</h4>
+<ul class="simple">
+<li>Parameter values can be defined via the GUI or the XMCDA file, by default via GUI.</li>
+<li><strong>Name:</strong> comparison with<ul>
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>alternatives vs alternatives (XMCDA label : alternatives) (default)</li>
+<li>alternatives vs boundary profiles (XMCDA label : boundary_profiles)</li>
+<li>alternatives vs central (characteristic) profiles (XMCDA label : central_profiles)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+<li><strong>Name:</strong> generalised criterion<ul>
+<li><strong>Type:</strong> drop-down list</li>
+<li><dl class="first docutils">
+<dt><strong>Possible values:</strong></dt>
+<dd><ul class="first last">
+<li>Each criterion needs its own function (XMCDA label : specified) (default)</li>
+<li>Usual Criterion (XMCDA label : usual)</li>
+<li>U-Shape Criterion, needs indifference threshold specified in criterion. (XMCDA label : u-shape)</li>
+<li>V-Shape Criterion, needs threshold of strict preference specified in criterion. (XMCDA label : v-shap)</li>
+<li>Level Criterion, needs both indifference and strict preference thresholds specified in criterion. (XMCDA label : level)</li>
+<li>V-Shape with Indifference Criterion, needs both indifference and strict preference thresholds specified in criterion. (XMCDA label : v-shape-ind)</li>
+<li>Gaussian Criterion, needs the inflection point of the preference function specified in criterion. (XMCDA label : gaussian)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul>
+<li><p class="first"><strong>Tag:</strong> methodParameters</p>
+</li>
+<li><p class="first"><strong>Code:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">"comparison_with"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">1</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">parameter</span> <span class="n">name</span><span class="o">=</span><span class="s2">"generalised_criterion"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="n">label</span><span class="o">&gt;%</span><span class="mi">2</span><span class="o">&lt;/</span><span class="n">label</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">value</span><span class="o">&gt;</span>
+  <span class="o">&lt;/</span><span class="n">parameter</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">methodParameters</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="promethee-preference-put-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">preferences</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">partial_preferences</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v2/../programs_xmcda-v4/pd-PROMETHEE_preference-PUT.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="preferences">
+<span id="promethee-preference-put-output1"></span><h3>preferences</h3>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>Aggregated preference matrix computed from the given data. This matrix aggregates partial preference indices from all criteria into single preference index per pair of alternatives or alternatives/profiles.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesComparisons</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="partial-preferences">
+<span id="promethee-preference-put-output2"></span><h3>partial preferences</h3>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>Preference matrix computed from the given data. This matrix contains partial preference indices for all criteria and all pairs of alternatives or alternatives/profiles.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesComparisons</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="promethee-preference-put-output3"></span><h3>messages</h3>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>Messages or errors generated by this module.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> methodMessages</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v2/pd-PROMETHEE_preference-PUT.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/programs_xmcda-v4/../_static/css/bootstrap.min.css">
+  <script src="/programs_xmcda-v4/../_static/js/jquery.min.js"></script>
+  <script src="/programs_xmcda-v4/../_static/js/bootstrap.min.js"></script>
+  <link href="/programs_xmcda-v4/../_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="learnmrsortmip">
+<span id="learnmrsortmip-oso"></span><h1>LearnMRSortMIP</h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name">
+<col class="field-body">
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Provider:</th><td class="field-body">oso</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Version:</th><td class="field-body">1.0</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="description">
+<h2>Description</h2>
+<p>The purpose of this webservice is to infer parameters of an ELECTRE TRI Bouyssou-Marchant model. It takes as input a set of learning alternatives evaluated on the criteria and their affectations to the different categories of the model. It is possible to perform a global inference of the parameters of the model (i.e. inferring the profiles, the weights and the credibility threshold) or to perform partial inference (i.e. only inferring the weights and the credibility threshold or only inferring the profiles delimiting the categories). The webservice will try to find a model that maximize the number of learning alternatives compatible with it. It means that it accepts in input an inconsistent set of learning alternatives that cannot be represented by an ELECTRE TRI model.</p>
+<ul class="simple">
+<li><strong>Contact:</strong> Olivier Sobrie (<a class="reference external" href="mailto://olivier.sobrie%40gmail.com" rel="nofollow">olivier<span>.</span>sobrie<span>@</span>gmail<span>.</span>com</a>)</li>
+<li><strong>Reference:</strong> Agn&egrave;s Leroy: Apprentissage des param&egrave;tres d&rsquo;une m&Atilde;&copy;thode multicrit&egrave;re de tri ordonn&eacute;</li>
+</ul>
+</div>
+<div class="section" id="inputs">
+<h2>Inputs</h2>
+<p>(For outputs, see <a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">below</span></a>)</p>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">criteria</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">alternatives</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">categories</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">perfs_table</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">reference_alts</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">crit_weights</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">assign</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">cat_profiles</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">lambda</span></a> <em>(optional)</em></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">solver</span></a> <em>(optional)</em></li>
+</ul>
+<div class="section" id="criteria">
+<span id="learnmrsortmip-oso-criteria"></span><h3>criteria</h3>
+<div class="section" id="id1">
+<h4>Description:</h4>
+<p>The list of criteria to be considerated in the model. Criteria can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), criteria are considered as active. Preference Direction of the criteria can also be set.</p>
+</div>
+<div class="section" id="xmcda-related">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteria</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternatives">
+<span id="learnmrsortmip-oso-alternatives"></span><h3>alternatives</h3>
+<div class="section" id="id2">
+<h4>Description:</h4>
+<p>The list of learning alternatives to use to compute the ELECTRE TRI model. Alternatives can be activated or desactivated via the &lt;active&gt; tag (true or false). By default (no &lt;active&gt; tag), alternatives are considered as active.</p>
+</div>
+<div class="section" id="id3">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categories">
+<span id="learnmrsortmip-oso-categories"></span><h3>categories</h3>
+<div class="section" id="id4">
+<h4>Description:</h4>
+<p>The list of categories of the model and their rank. The rank is required because the webservice need to know this to build the profiles delimiting the categories.</p>
+</div>
+<div class="section" id="id5">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categories</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="performancetable">
+<span id="learnmrsortmip-oso-perfs-table"></span><h3>performanceTable</h3>
+<div class="section" id="id6">
+<h4>Description:</h4>
+<p>The performance table of the learning alternatives. All the learning alternatives are evaluated on all the criteria of the ELECTRE TRI model. The evaluations should be numeric values, i.e. &lt;real&gt;, &lt;integer&gt; or &lt;rational&gt;.</p>
+</div>
+<div class="section" id="id7">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="profilesperformances">
+<span id="learnmrsortmip-oso-reference-alts"></span><h3>profilesPerformances</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id8">
+<h4>Description:</h4>
+<p>The performance table of containing the reference alternatives to use (optional). It contains the performance of the alternatives associated to the profiles of the model. It is combined with the cat_profiles input when wanting to infer only the weights and the credibility threshold.</p>
+</div>
+<div class="section" id="id9">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="criteriaweights">
+<span id="learnmrsortmip-oso-crit-weights"></span><h3>criteriaWeights</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id10">
+<h4>Description:</h4>
+<p>The set of criteria weights to use (optional). This input is set if the user only wants to infer the profiles of the model. It should be combined with the majorityThreshold input. If set, this input should contain the weights of the criteria defined in the criteria input.</p>
+</div>
+<div class="section" id="id11">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="alternativesassignments">
+<span id="learnmrsortmip-oso-assign"></span><h3>alternativesAssignments</h3>
+<div class="section" id="id12">
+<h4>Description:</h4>
+<p>The list of the learning alternatives affectations. This inputs represents the affectations of all the learning alternatives to a category. The categorie name used should be the same as the one given in the category input.</p>
+</div>
+<div class="section" id="id13">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternativesAssignments</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="categoriesprofiles">
+<span id="learnmrsortmip-oso-cat-profiles"></span><h3>categoriesProfiles</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id14">
+<h4>Description:</h4>
+<p>The categories profiles to use (optional). This input defines the profiles delimiting the categories of the model. It is optional and set when wanting to infer only the weights and the credibility threshold.</p>
+</div>
+<div class="section" id="id15">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesProfiles</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="majoritythreshold">
+<span id="learnmrsortmip-oso-lambda"></span><h3>majorityThreshold</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id16">
+<h4>Description:</h4>
+<p>The credibility threshold to use (optional). This input is combined with the crit_weights inputs when wanting to perform only the inference of the profiles.</p>
+</div>
+<div class="section" id="id17">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programParameters</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="solver">
+<span id="learnmrsortmip-oso-solver"></span><h3>solver</h3>
+<p><strong>Optional:</strong> yes, enabled by default</p>
+<div class="section" id="id18">
+<h4>Description:</h4>
+<p>The solver to use. Currently CPLEX and GLPK are supported. In none specified, GLPK is used.</p>
+</div>
+<div class="section" id="id19">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programParameters</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+</div>
+<div class="section" id="outputs">
+<span id="learnmrsortmip-oso-outputs"></span><h2>Outputs</h2>
+<ul class="simple">
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">compatible_alts</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">profiles_perfs</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">crit_weights</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">cat_profiles</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">lambda</span></a></li>
+<li><a class="reference internal" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html"><span class="std std-ref">messages</span></a></li>
+</ul>
+<div class="section" id="compatiblealternatives">
+<span id="learnmrsortmip-oso-compatible-alts-out"></span><h3>compatibleAlternatives</h3>
+<div class="section" id="id20">
+<h4>Description:</h4>
+<p>The reference alternatives that are compatible with the profiles, weights and majority threshold computed by the webservice.</p>
+</div>
+<div class="section" id="id21">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> alternatives</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="learnmrsortmip-oso-profiles-perfs-out">
+<span id="id22"></span><h3>profilesPerformances</h3>
+<div class="section" id="id23">
+<h4>Description:</h4>
+<p>The profiles performance table of the profiles computed by the webservice.</p>
+</div>
+<div class="section" id="id24">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> performanceTable</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="learnmrsortmip-oso-crit-weights-out">
+<span id="id25"></span><h3>criteriaWeights</h3>
+<div class="section" id="id26">
+<h4>Description:</h4>
+<p>The set of criteria weights found by the webservice.</p>
+</div>
+<div class="section" id="id27">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> criteriaValues</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="learnmrsortmip-oso-cat-profiles-out">
+<span id="id28"></span><h3>categoriesProfiles</h3>
+<div class="section" id="id29">
+<h4>Description:</h4>
+<p>The category profiles computed by the webservice.</p>
+</div>
+<div class="section" id="id30">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> categoriesProfiles</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="learnmrsortmip-oso-lambda-out">
+<span id="id31"></span><h3>majorityThreshold</h3>
+<div class="section" id="id32">
+<h4>Description:</h4>
+<p>The credibility threshold computed by the webservice.</p>
+</div>
+<div class="section" id="id33">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programParameters</li>
+</ul>
+<hr class="docutils">
+</div>
+</div>
+<div class="section" id="messages">
+<span id="learnmrsortmip-oso-message"></span><h3>messages</h3>
+<div class="section" id="id34">
+<h4>Description:</h4>
+<p>A list of messages generated by the webservice. In this output the result of the inference will be given. It gives informations on what might be wrong in the inputs.</p>
+</div>
+<div class="section" id="id35">
+<h4>XMCDA related:</h4>
+<ul class="simple">
+<li><strong>Tag:</strong> programExecutionResult</li>
+</ul>
+<hr class="docutils">
+<p>For further technical details on the web service underlying this program, have a look at its documentation <a class="reference external" href="https://www.decision-deck.org/ws" rel="nofollow">here</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/programs_xmcda-v4/pd-LearnMRSortMIP-oso.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Decision Deck - diviz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/_static/css/bootstrap.min.css">
+  <script src="/_static/js/jquery.min.js"></script>
+  <script src="/_static/js/bootstrap.min.js"></script>
+  <link href="/_static/css/style.css" rel="stylesheet" type="text/css">
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+window.addEventListener("hashchange", function() { scrollBy(0, -60) })
+</script>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.decision-deck.org"]);
+  _paq.push(["setDomains", ["*.decision-deck.org","*.diviz.org"]]);
+  _paq.push(["enableCrossDomainLinking"]);
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//analytics.decision-deck.org/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "1"]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p></p></noscript>
+<!-- End Matomo Code -->
+
+
+</head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.decision-deck.org/" rel="nofollow">Decision Deck</a><span class="navbar-brand visible-sm visible-md visible-lg">|</span><a class="navbar-brand" href="https://www.diviz.org/" rel="nofollow">diviz</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="/diviz.from-x2-to-x4.html">INITIATIVES<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://www.diviz.org/" rel="nofollow">diviz</a></li>
+            <li><a href="https://www.decision-deck.org/xmcda" rel="nofollow">XMCDA</a></li>
+            <li><a href="https://www.decision-deck.org/ws" rel="nofollow">XMCDA web services</a></li>
+            <li><a href="https://www.decision-deck.org/gis" rel="nofollow">GIS</a></li>
+            <li><a href="https://www.decision-deck.org/r" rel="nofollow">R</a></li>
+            <hr>
+            <li><a href="https://www.decision-deck.org/d2" rel="nofollow">d2</a></li>
+            <li><a href="https://www.decision-deck.org/d3" rel="nofollow">d3</a></li>
+          </ul>
+        </li>
+        <li><a href="https://www.decision-deck.org/news" rel="nofollow">NEWS</a></li>
+        <li><a href="https://www.decision-deck.org/project/events.html" rel="nofollow">EVENTS</a></li>
+        <li><a href="https://www.decision-deck.org/project/downloads.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Downloads" rel="nofollow"><span class="glyphicon glyphicon-download icons"></span></a></li>
+        <li><a href="https://www.decision-deck.org/project/contact.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Contact" rel="nofollow"><span class="glyphicon glyphicon-envelope icons"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<div class="section" id="migrating-from-diviz-x2-to-diviz-x4">
+<span id="diviz-x4"></span><span id="diviz-xmcdav4"></span><h1>Migrating from diviz-x2 to diviz-x4</h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first">Table of contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="/diviz.from-x2-to-x4.html" id="id2">Introduction</a></li>
+<li><a class="reference internal" href="/diviz.from-x2-to-x4.html" id="id3">Example workflows for diviz x4</a></li>
+<li><a class="reference internal" href="/diviz.from-x2-to-x4.html" id="id4">Converting existing &ldquo;x2&rdquo; workflows</a></li>
+<li><a class="reference internal" href="/diviz.from-x2-to-x4.html" id="id5">How to submit feedback: bug reports, questions, suggestions?</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="/diviz.from-x2-to-x4.html">Introduction</a></h2>
+<p>The current version of diviz, referred to as diviz-x4 in this document, is based on the latest XMCDA v4. It replaces the former version of diviz, which works with XMCDA v2.</p>
+<p>On this page you will find important information to guide you using the software, esp. if you used the legacy diviz-x2 before.  You will learn how to convert existing diviz x2 workflows into the new version.</p>
+<p>To download it, please refer to <a href="/diviz.from-x2-to-x4.html"><span class="problematic" id="id7">`the dedicated page &lt;download.x4.html&gt;.`_</span></a>.</p>
+</div>
+<div class="section" id="example-workflows-for-diviz-x4">
+<h2><a class="toc-backref" href="/diviz.from-x2-to-x4.html">Example workflows for diviz x4</a></h2>
+<p>Example workflows are available at: <span class="xref std std-doc">workflows_x4</span>.</p>
+</div>
+<div class="section" id="converting-existing-x2-workflows">
+<h2><a class="toc-backref" href="/diviz.from-x2-to-x4.html">Converting existing &ldquo;x2&rdquo; workflows</a></h2>
+<p>diviz-x4 offers the possibility to convert diviz-x2 workflows.</p>
+<p>However, this feature is not perfect, it is there to speed up the transition from one version to another, but it is still necessary to carefully examine the translated workflows.</p>
+<p>To convert one or more workflows:</p>
+<ul class="simple">
+<li>In diviz-x4, go to the File menu, then click on the menu item &ldquo;Convert from diviz - XMCDA v2&hellip;&rdquo;</li>
+<li>A window opens with the existing diviz-x2 workflows</li>
+<li>Select the workflows you wish to convert (to select several at once, hold down the &lsquo;Ctrl&rsquo; key)</li>
+</ul>
+<p>Once converted, the workflows are automatically opened in the diviz-x4 workspace.
+There are several things to check:</p>
+<ul class="simple">
+<li>Check that all programs are present: some may not be available,</li>
+<li>Check the settings of the programs, it is possible that some parameters have not been correctly translated, especially the default values.</li>
+<li>In general, check the &ldquo;wiring&rdquo; between files and programs, and between programs: some links may have disappeared (NB: in general, if the entries of a program are not all linked, it is not possible to execute the workflow).</li>
+</ul>
+<p>Also note that diviz-x2 and diviz-x4 can run at the same tme, which makes it easier to compare a migrated workflow with its original, XMCDA v2 version.</p>
+</div>
+<div class="section" id="how-to-submit-feedback-bug-reports-questions-suggestions">
+<h2><a class="toc-backref" href="/diviz.from-x2-to-x4.html">How to submit feedback: bug reports, questions, suggestions?</a></h2>
+<p>We look forward to your feedback!  You can do so:</p>
+<ul class="simple">
+<li>by mail, to <a class="reference external" href="mailto://support-x4%40diviz.org" rel="nofollow">support-x4<span>@</span>diviz<span>.</span>org</a></li>
+<li>by <a class="reference external" href="https://gitlab.com/decision-deck/diviz/issues/new?issue" rel="nofollow">opening a new ticket</a> (requires a (free) account on <a class="reference external" href="https://www.gitlab.com/" rel="nofollow">GitLab</a>).</li>
+</ul>
+<p>In either case, this opens a support ticket on the diviz ticket tracking system hosted by <a class="reference external" href="https://www.gitlab.com/decision-deck/diviz" rel="nofollow">gitlab</a>.  If you choose email, you will receive our replies by email and you can reply by email as well: you don&rsquo;t need to have an account on GitLab in this case.</p>
+<p>In any case, please describe the problem as precisely as possible, attaching if necessary the workflows (including the original diviz-x2 workflows when it is relevant), screenshots, etc.</p>
+</div>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="/diviz.from-x2-to-x4.html" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><span class="glyphicon glyphicon-copyright-mark"></span> 2008-2021, Decision Deck Consortium.</p>
+</footer>
+
+</body>
+</html>
