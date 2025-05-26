@@ -1,0 +1,93 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.000
+The diviz workbench
+
+2
+00:00:02.000 --> 00:00:04.000
+Create a new workflow
+
+3
+00:00:04.100 --> 00:00:09.100
+Define the name of the workflow
+
+4
+00:00:12.000 --> 00:00:15.000
+Search for the weighted sum program
+
+5
+00:00:16.000 --> 00:00:19.000
+Drag and drop the weighted sum program into the empty workspace
+
+6
+00:00:22.000 --> 00:00:26.000
+Add the XMCDA file describing the criteria
+
+7
+00:00:26.100 --> 00:00:29.100
+And connect it to the corresponding input of the weighted sum
+
+8
+00:00:29.200 --> 00:00:44.200
+Repeat for the XMCDA files describing the alternatives, and containing the performance table and the criteria weights
+
+9
+00:00:51.300 --> 00:00:56.300
+Execute the workflow
+
+10
+00:00:56.400 --> 00:01:05.400
+Check the overall values produced
+
+11
+00:01:07.000 --> 00:01:11.000
+Let's plot the preorder of the alternatives
+
+12
+00:01:12.100 --> 00:01:16.100
+Drag and drop the program to plot this preorder into the workspace
+
+13
+00:01:17.000 --> 00:01:21.000
+Connect it to the existing workflow
+
+14
+00:01:21.100 --> 00:01:29.100
+Edit the properties of the program to rank the alternative with the lowest overall value first
+
+15
+00:01:29.200 --> 00:01:35.200
+Execute the workflow
+
+16
+00:01:35.300 --> 00:01:40.300
+Show the preorder
+
+17
+00:01:41.400 --> 00:01:46.400
+Open an existing workflow
+
+18
+00:01:52.000 --> 00:01:57.500
+Execute it
+
+19
+00:01:57.600 --> 00:02:12.600
+Check the history of past executions
+
+20
+00:02:12.700 --> 00:02:16.700
+The execution continues in the background (you could even leave diviz and return later)
+
+21
+00:02:17.800 --> 00:02:29.800
+Check intermediate results of a past execution
+
+22
+00:02:29.900 --> 00:02:31.900
+The execution is finished
+
+23
+00:02:32.000 --> 00:02:41.000
+Let's check the latest results
